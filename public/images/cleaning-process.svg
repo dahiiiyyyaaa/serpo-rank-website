@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 680">
+ <defs><linearGradient id="a" x2="1" y2="1"><stop stop-color="#edf6f1"/><stop offset="1" stop-color="#d8eae2"/></linearGradient></defs><rect width="900" height="680" rx="36" fill="url(#a)"/>
+ <circle cx="450" cy="340" r="228" fill="#fff" opacity=".72"/><path d="M203 470c99 40 398 43 497 0" fill="none" stroke="#bad3c6" stroke-width="3" stroke-dasharray="8 12"/>
+ <g fill="#fff" stroke="#bdd5c8" stroke-width="3"><circle cx="258" cy="268" r="90"/><circle cx="450" cy="224" r="90"/><circle cx="642" cy="268" r="90"/></g>
+ <g fill="#17685e"><path d="M230 285h57v38h-57zM236 268h45v18h-45zM245 242h28v26h-28z"/><path d="m424 252 26-34 26 34v42h-52zM433 262h15v20h-15zm22 0h12v20h-12z"/><path d="M624 246h37v49h-37zM630 232h26v14h-26zM631 258h22v4h-22zm0 12h22v4h-22z"/></g>
+ <g fill="#cce5d7"><circle cx="258" cy="268" r="64"/><circle cx="450" cy="224" r="64"/><circle cx="642" cy="268" r="64"/></g>
+ <g fill="#17685e"><path d="M230 285h57v38h-57zM236 268h45v18h-45zM245 242h28v26h-28z"/><path d="m424 252 26-34 26 34v42h-52zM433 262h15v20h-15zm22 0h12v20h-12z"/><path d="M624 246h37v49h-37zM630 232h26v14h-26zM631 258h22v4h-22zm0 12h22v4h-22z"/></g>
+ <g font-family="Arial,sans-serif" font-size="17" font-weight="700" fill="#244f46" text-anchor="middle"><text x="258" y="390">Audit</text><text x="450" y="346">Plan</text><text x="642" y="390">Improve</text></g>
+ <rect x="260" y="492" width="380" height="86" rx="24" fill="#fff"/><path d="M299 537h304" stroke="#dcebe3" stroke-width="10" stroke-linecap="round"/><path d="M299 537h215" stroke="#75a78b" stroke-width="10" stroke-linecap="round"/><circle cx="517" cy="537" r="15" fill="#17685e"/>
+</svg>

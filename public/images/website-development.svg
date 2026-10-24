@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 680">
+ <defs><linearGradient id="w" x2="1" y2="1"><stop stop-color="#eaf4ef"/><stop offset="1" stop-color="#d9eae0"/></linearGradient></defs><rect width="900" height="680" rx="36" fill="#fcfefc"/><circle cx="680" cy="148" r="95" fill="#fff" opacity=".5"/>
+ <rect x="92" y="140" width="600" height="378" rx="24" fill="#24564c"/><rect x="107" y="155" width="570" height="340" rx="13" fill="#fff"/><rect x="107" y="155" width="570" height="47" rx="13" fill="#f2f7f3"/><circle cx="133" cy="178" r="5" fill="#9dbfa8"/><rect x="153" y="174" width="212" height="8" rx="4" fill="#c1d3c7"/>
+ <rect x="141" y="230" width="245" height="17" rx="8" fill="#35645a"/><rect x="141" y="262" width="184" height="9" rx="5" fill="#c1d2c7"/><rect x="141" y="282" width="214" height="9" rx="5" fill="#c1d2c7"/><rect x="141" y="322" width="121" height="34" rx="12" fill="#17685e"/>
+ <rect x="423" y="225" width="216" height="224" rx="18" fill="#edf5ef"/><path d="M445 410c30-59 56-74 92-63 35 10 52-24 82-72" fill="none" stroke="#7fa98b" stroke-width="10" stroke-linecap="round"/><rect x="445" y="248" width="172" height="10" rx="5" fill="#bdd3c3"/>
+ <rect x="704" y="267" width="110" height="243" rx="22" fill="#1e4f46"/><rect x="714" y="282" width="90" height="211" rx="13" fill="#fff"/><rect x="725" y="305" width="68" height="61" rx="9" fill="#e3f0e7"/><rect x="725" y="380" width="68" height="8" rx="4" fill="#a9c5b2"/><rect x="725" y="398" width="52" height="8" rx="4" fill="#d0dfd3"/><rect x="725" y="424" width="68" height="29" rx="10" fill="#17685e"/>
+ <path d="M369 518v37m-83 0h166" stroke="#426f61" stroke-width="12" stroke-linecap="round"/>
+</svg>

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 680">
+ <defs><linearGradient id="m" x2="1" y2="1"><stop stop-color="#eef6f2"/><stop offset="1" stop-color="#e2eee8"/></linearGradient></defs><rect width="1100" height="680" rx="34" fill="url(#m)"/>
+ <g fill="#c7dbcf" stroke="#fff" stroke-width="7" stroke-linejoin="round"><path d="m177 159 59-24 41 16 26 43-21 31-3 37-34 16-6 48-42 29-30-20 5-47-21-32 4-44-31-23z"/><path d="m270 374 37 19 30 54-8 48 32 44-18 64-34 16-17-69-28-47 8-55-30-38z"/><path d="m437 154 35-27 60 10 20 27 43 8 8 38-52 20-19 42-42-9-23-39-31-16z"/><path d="m453 294 37-18 55 20 14 46-35 34-19 63-35 21-11-60-32-48z"/><path d="m574 160 44-20 55 17 16 36-29 33-49 2-31-27z"/><path d="m714 248 48-35 75 9 37 43 28 13-14 36-61 3-23 44-35 2-21-38-42-16z"/><path d="m792 387 51-12 31 26-11 44-39 8-36-27z"/></g>
+ <path d="M254 244c156-140 382-119 577 146" fill="none" stroke="#17685e" stroke-width="5" stroke-dasharray="4 14" stroke-linecap="round"/>
+ <g><circle cx="254" cy="244" r="32" fill="#17685e"/><circle cx="254" cy="244" r="10" fill="#fff"/><path d="M254 214c-17 0-29 12-29 28 0 21 29 51 29 51s29-30 29-51c0-16-12-28-29-28Z" fill="#17685e" opacity=".22"/></g>
+ <g><circle cx="831" cy="390" r="32" fill="#83a88d"/><circle cx="831" cy="390" r="10" fill="#fff"/></g>
+ <g font-family="Arial,sans-serif" fill="#1f5148"><rect x="113" y="78" width="198" height="58" rx="18" fill="#fff"/><text x="212" y="115" font-size="20" font-weight="700" text-anchor="middle">United States</text><rect x="747" y="462" width="176" height="58" rx="18" fill="#fff"/><text x="835" y="499" font-size="20" font-weight="700" text-anchor="middle">Pakistan</text></g>
+ <rect x="289" y="561" width="521" height="54" rx="18" fill="#fff" opacity=".84"/><text x="550" y="596" fill="#52786b" font-family="Arial,sans-serif" font-size="18" text-anchor="middle">Remote team · clients served worldwide</text>
+</svg>

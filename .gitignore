@@ -1,0 +1,39 @@
+# Dependencies and generated output
+node_modules/
+**/node_modules/
+.output/
+dist/
+build/
+coverage/
+.vite/
+.nitro/
+.turbo/
+*.tsbuildinfo
+
+# Local editor and assistant data
+.codex-backups/
+Microsoft/
+.DS_Store
+Thumbs.db
+
+# Environment files and secrets
+.env
+.env.*
+!.env.example
+!.env.*.example
+secrets/
+credentials/
+*.secret
+*.credentials
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Temporary files and logs
+*.log
+logs/
+*.tmp
+*.temp
+*.swp
+*~

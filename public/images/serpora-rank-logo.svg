@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 390 72" role="img" aria-labelledby="title">
+  <title id="title">Serpo Rank</title>
+  <rect x="2" y="2" width="68" height="68" rx="21" fill="#17685e"/>
+  <path d="M20 47c0-15 9-25 25-28-1 12-6 21-17 26 11-3 18-9 23-19 2 15-7 27-23 29-3 0-6-3-8-8Z" fill="#e4f4e8"/>
+  <text x="86" y="35" fill="#164b45" font-family="Arial, sans-serif" font-size="26" font-weight="700" letter-spacing="1.4">SERPO</text>
+  <text x="87" y="57" fill="#5c827a" font-family="Arial, sans-serif" font-size="14" font-weight="600" letter-spacing="4.4">RANK</text>
+</svg>
