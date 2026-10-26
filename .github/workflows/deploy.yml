@@ -32,7 +32,7 @@ jobs:
       - name: Sync files to Hosting.com
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
-          server: serporank.com
+          server: 65.181.116.46
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: .output/public/
