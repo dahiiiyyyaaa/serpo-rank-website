@@ -3,7 +3,7 @@ import { SiteLink } from '@/components/site/navigation';
 import { homeContent } from '@/data/home';
 import './home-page.css';
 
-export function HomePage() {
+export function ServicesLandingPage() {
   return <main className="home-page sr-home">
     <section className="sr-home__hero" aria-labelledby="sr-home-title">
       <div className="sr-home__container sr-home__hero-layout">
@@ -13,7 +13,7 @@ export function HomePage() {
           <p>{homeContent.hero.description}</p>
           <div className="sr-home__actions">
             <SiteLink className="sr-home__button" to="/seo-audit">Book a Free SEO Audit <ArrowRight size={17} aria-hidden="true" /></SiteLink>
-            <SiteLink className="sr-home__button sr-home__button--secondary" to="/services">Explore Our Services <ArrowRight size={17} aria-hidden="true" /></SiteLink>
+            <SiteLink className="sr-home__button sr-home__button--secondary" to="/" hash="our-seo-services">Explore Our Services <ArrowRight size={17} aria-hidden="true" /></SiteLink>
           </div>
         </div>
         <figure className="sr-home__hero-art">
