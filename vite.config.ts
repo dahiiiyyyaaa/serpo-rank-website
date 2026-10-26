@@ -18,7 +18,15 @@ export default defineConfig({
   css: { transformer: "lightningcss" },
   plugins: [
     tailwindcss(),
-    tanstackStart({ server: { entry: "server" } }),
+    tanstackStart({
+      server: { entry: "server" },
+      prerender: {
+        enabled: true,
+        autoStaticPathsDiscovery: true,
+        crawlLinks: true,
+        failOnError: true,
+      },
+    }),
     nitro(),
     viteReact(),
   ],
