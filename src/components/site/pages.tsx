@@ -11,7 +11,7 @@ import { seoPages, siteOrigin } from '@/data/seo';
 import onPageSeoArticle from '@/content/on-page-seo.md?raw';
 import offPageSeoArticle from '@/content/off-page-seo.md?raw';
 import technicalSeoArticle from '@/content/technical-seo.md?raw';
-import { HomePage } from '@/components/site/home-page';
+import { ServicesLandingPage } from '@/components/site/services-landing-page';
 
 
 const imagePaths = {
@@ -189,8 +189,8 @@ function ServiceCard({ service }: { service: Service }) {
   return <Link className="service-card" to={servicePath(service)}><span className="icon-circle"><Icon size={22} strokeWidth={1.8} /></span><span className="service-card-copy"><strong>{service.title}</strong><span>{service.description}</span></span></Link>;
 }
 
-export function Home() {
-  return <><HomePage /><Footer /></>;
+export function Services() {
+  return <><SeoMeta title={seoPages.services.title} description={seoPages.services.description} /><ServicesLandingPage /><Footer /></>;
 }
 
 type ContactFormValues = {
@@ -270,11 +270,11 @@ function SupportPoint({ icon, title, text }: { icon: React.ReactNode; title: str
   return <div className="support-point"><span className="detail-icon">{icon}</span><h3>{title}</h3><p>{text}</p></div>;
 }
 
-export function Services() {
+export function Home() {
   return <>
     <SeoMeta
-      title={seoPages.services.title}
-      description={seoPages.services.description}
+      title={seoPages.home.title}
+      description={seoPages.home.description}
     />
     <main className="services-page">
       <section className="services-hero">
@@ -390,7 +390,7 @@ export function Services() {
         <ServicesFaq faqs={combinedServicesFaqs} />
       </section>
 
-      <ProjectEnquiryCTA source="Services" />
+      <ProjectEnquiryCTA source="Home" />
     </main>
     <Footer />
   </>;
@@ -423,7 +423,6 @@ function ServicesPricing({ localPage = false }: { localPage?: boolean }) {
         </article>;
       })}
     </div>
-    <p className="home-pricing-note">Prices shown are monthly in USD. A $500 one-time setup fee and a 3-month minimum initial term apply. View all package details for full terms.</p>
   </section>;
 }
 
