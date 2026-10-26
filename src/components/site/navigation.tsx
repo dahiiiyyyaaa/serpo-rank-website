@@ -5,7 +5,7 @@ type SiteLinkProps = { to: string; hash?: string; end?: boolean; children?: Reac
 export function SiteLink({ to, hash, end: _end, ...props }: SiteLinkProps) {
   const [path = '/', query] = to.split('?');
   const search = Object.fromEntries(new URLSearchParams(query || ''));
-  return <Link to={path} search={() => search} hash={hash} {...props} />;
+  return <Link to={path} search={() => search} {...(hash ? { hash } : {})} {...props} />;
 }
 export function SiteNavLink({ to, end, className, ...props }: SiteLinkProps) {
   const pathname = useLocation({ select: location => location.pathname });

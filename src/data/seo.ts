@@ -1,15 +1,16 @@
-export const siteOrigin = 'https://serporarank.com';
+export const siteOrigin = 'https://serporank.com';
 
 export const seoPages = {
   home: {
     path: '/',
-    title: 'Serpo Rank | SEO for Home Cleaning Businesses',
-    description: 'Help your home cleaning business build a stronger online presence with Serpo Rank. Discover practical SEO services designed around your local market.',
+    title: 'SEO for Home Cleaning Services | Rank Higher on Google',
+    description: 'Get more bookings with SEO for your home cleaning business. We help cleaning businesses rank on Google and Maps with Local SEO and content. Free audit.',
   },
   services: {
     path: '/services',
-    title: 'SEO Services For Home Cleaning Businesses That Help You Rank | Serpo Rank',
-    description: 'Explore SEO services designed to improve your website’s performance, visibility, and qualified organic traffic.',
+    canonicalPath: '/',
+    title: 'SEO for Home Cleaning Services | Rank Higher on Google',
+    description: 'Get more bookings with SEO for your home cleaning business. We help cleaning businesses rank on Google and Maps with Local SEO and content. Free audit.',
   },
   pricing: {
     path: '/packages',
@@ -54,7 +55,7 @@ export const seoPages = {
 } as const;
 
 export function seoHead(page: (typeof seoPages)[keyof typeof seoPages]) {
-  const canonical = `${siteOrigin}${page.path}`;
+  const canonical = `${siteOrigin}${'canonicalPath' in page ? page.canonicalPath : page.path}`;
   return {
     meta: [
       { title: page.title },
@@ -63,7 +64,12 @@ export function seoHead(page: (typeof seoPages)[keyof typeof seoPages]) {
       { property: 'og:description', content: page.description },
       { property: 'og:type', content: 'website' },
       { property: 'og:url', content: canonical },
+      { property: 'og:image', content: `${siteOrigin}/images/serpo-rank-official-logo.jpg` },
+      { property: 'og:image:alt', content: 'Serpo Rank logo' },
       { name: 'twitter:card', content: 'summary_large_image' },
+      { name: 'twitter:title', content: page.title },
+      { name: 'twitter:description', content: page.description },
+      { name: 'twitter:image', content: `${siteOrigin}/images/serpo-rank-official-logo.jpg` },
     ],
     links: [{ rel: 'canonical', href: canonical }],
   };

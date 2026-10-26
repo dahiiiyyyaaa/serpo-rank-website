@@ -11,23 +11,14 @@ import { seoPages, siteOrigin } from '@/data/seo';
 import onPageSeoArticle from '@/content/on-page-seo.md?raw';
 import offPageSeoArticle from '@/content/off-page-seo.md?raw';
 import technicalSeoArticle from '@/content/technical-seo.md?raw';
-import { ServicesLandingPage } from '@/components/site/services-landing-page';
 
 
 const imagePaths = {
   logo: "/images/serpo-rank-official-logo.png",
-  homeHero: "/images/home-seo-hero.png",
-  hero: "/images/cleaning-hero.jpeg",
-  howItWorks: "/images/cleaning-process-photo.jpeg",
-  whereWeWork: "/images/global-service-area.jpeg",
   servicesHero: "/images/services-hero.png",
-  servicesCta: "/images/services-growth.webp",
   onpageHero: "/images/on-page-seo-hero.png",
   offpageHero: "/images/off-page-seo-hero.png",
-  onpageWhy: "/images/content-audit.svg",
   localHero: "/images/local-seo-hero.webp",
-  localWhy: "/images/cleaning-process.svg",
-  localWhyResults: "/images/local-search-results.webp",
   technicalHero: "/images/technical-seo-hero.webp",
   websiteHero: "/images/website-development.svg",
 };
@@ -129,7 +120,7 @@ function Logo() {
 
 
 
-function SeoMeta({ title, description }: { title: string; description: string }) {
+function SeoMeta({ title, description, canonicalPath }: { title: string; description: string; canonicalPath?: string }) {
   useEffect(() => {
     document.title = title;
     let tag = document.querySelector<HTMLMetaElement>('meta[name="description"]');
@@ -139,8 +130,8 @@ function SeoMeta({ title, description }: { title: string; description: string })
       document.head.append(tag);
     }
     tag.content = description;
-    const canonicalPath = window.location.pathname === '/' ? '/' : window.location.pathname.replace(/\/+$/, '');
-    const canonicalUrl = `${siteOrigin}${canonicalPath}`;
+    const resolvedPath = canonicalPath ?? (window.location.pathname === '/' ? '/' : window.location.pathname.replace(/\/+$/, ''));
+    const canonicalUrl = `${siteOrigin}${resolvedPath}`;
     let canonical = document.querySelector<HTMLLinkElement>('link[rel="canonical"]');
     if (!canonical) {
       canonical = document.createElement('link');
@@ -155,7 +146,7 @@ function SeoMeta({ title, description }: { title: string; description: string })
       document.head.append(ogUrl);
     }
     ogUrl.content = canonicalUrl;
-  }, [title, description]);
+  }, [title, description, canonicalPath]);
   return null;
 }
 
@@ -169,7 +160,6 @@ export function Navbar() {
         <Button variant="site" size="site" type="button" className="menu-toggle" aria-expanded={menuOpen} aria-controls="primary-navigation" onClick={() => setMenuOpen(!menuOpen)} aria-label={menuOpen ? 'Close menu' : 'Open menu'}>{menuOpen ? <X /> : <Menu />}</Button>
         <nav id="primary-navigation" className={`main-nav ${menuOpen ? 'is-open' : ''}`}>
           <NavLink to="/" end onClick={closeMenu}>Home</NavLink>
-          <NavLink to="/services" onClick={closeMenu}>Services</NavLink>
           <NavLink to="/packages" onClick={closeMenu}>Pricing</NavLink>
           <NavLink to="/about" onClick={closeMenu}>About</NavLink>
           <NavLink to="/contact" onClick={closeMenu}>Contact</NavLink>
@@ -181,16 +171,12 @@ export function Navbar() {
 }
 
 export function Footer() {
-  return <footer className="footer"><div className="container footer-top"><div><Logo /></div><div className="footer-links"><span className="eyebrow">EXPLORE</span><div className="footer-link-grid"><Link to="/">Home</Link><Link to="/services">Services</Link><Link to="/packages">Pricing &amp; Plans</Link><Link to="/services/local-seo">Local SEO</Link><Link to="/services/on-page-seo">On-Page SEO</Link><Link to="/seo-audit">SEO Audit</Link><Link to="/about">About</Link><Link to="/contact">Contact</Link></div></div><div className="footer-links"><span className="eyebrow">CONNECT</span><div className="socials"><a href="https://www.linkedin.com/in/dahya-butt-414521411" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><Linkedin size={17} /></a></div></div></div></footer>;
+  return <footer className="footer"><div className="container footer-top"><div><Logo /></div><div className="footer-links"><span className="eyebrow">EXPLORE</span><div className="footer-link-grid"><Link to="/">Home</Link><Link to="/packages">Pricing &amp; Plans</Link><Link to="/services/local-seo">Local SEO</Link><Link to="/services/on-page-seo">On-Page SEO</Link><Link to="/seo-audit">SEO Audit</Link><Link to="/about">About</Link><Link to="/contact">Contact</Link></div></div><div className="footer-links"><span className="eyebrow">CONNECT</span><div className="socials"><a href="https://www.linkedin.com/in/dahya-butt-414521411" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><Linkedin size={17} /></a></div></div></div></footer>;
 }
 
 function ServiceCard({ service }: { service: Service }) {
   const Icon = service.icon;
   return <Link className="service-card" to={servicePath(service)}><span className="icon-circle"><Icon size={22} strokeWidth={1.8} /></span><span className="service-card-copy"><strong>{service.title}</strong><span>{service.description}</span></span></Link>;
-}
-
-export function Services() {
-  return <><SeoMeta title={seoPages.services.title} description={seoPages.services.description} /><ServicesLandingPage /><Footer /></>;
 }
 
 type ContactFormValues = {
@@ -270,11 +256,14 @@ function SupportPoint({ icon, title, text }: { icon: React.ReactNode; title: str
   return <div className="support-point"><span className="detail-icon">{icon}</span><h3>{title}</h3><p>{text}</p></div>;
 }
 
-export function Home() {
+export function Services() {
+  const { pathname } = useLocation();
+  const pageSeo = pathname === '/' ? seoPages.home : seoPages.services;
   return <>
     <SeoMeta
-      title={seoPages.home.title}
-      description={seoPages.home.description}
+      title={pageSeo.title}
+      description={pageSeo.description}
+      canonicalPath="/"
     />
     <main className="services-page">
       <section className="services-hero">
@@ -566,7 +555,7 @@ export function About() {
     if (event.key === 'ArrowLeft') { event.preventDefault(); moveCertificate(-1); }
     if (event.key === 'ArrowRight') { event.preventDefault(); moveCertificate(1); }
   };
-  const active = aboutCertificates[activeCertificate];
+  const active = aboutCertificates[activeCertificate] ?? aboutCertificates[0]!;
 
   return <><SeoMeta title={seoPages.about.title} description={seoPages.about.description} /><main className="about-page"><section className="about-hero container"><div className="about-copy"><span className="eyebrow">ABOUT ME</span><h1>Hi, I'm Dahya.<span>Founder of Serpo Rank.</span></h1><p>I’ve been fascinated by search engines since I was a kid: how they find websites, understand them, and decide which ones to show first. After school, I turned that curiosity into a real skill set. I taught myself SEO, website development, and digital marketing, and for the past year I’ve been learning and practicing SEO professionally. That includes technical SEO, on-page optimization, keyword research, local SEO, and content optimization.</p><p>I’m also studying for my bachelor’s degree at Virtual University (VU), and I plan to go on to study marketing sciences at a respected college. Starting this agency is how I put what I learn into practice: working with real businesses, learning from every project, and building experience that my future studies will deepen.</p><p>My goal isn’t just higher rankings. I want to build websites and SEO strategies that make businesses easier to find, easier to trust, and easier to choose.</p><p>I’m early in my journey, and I’d rather be upfront about that than overpromise. What I bring is genuine curiosity, careful work, and clear communication, with no jargon and no guarantees I can’t keep.</p><a className="text-link about-linkedin" href="https://www.linkedin.com/in/dahya-butt-414521411" target="_blank" rel="noopener noreferrer"><Linkedin size={16} /> Connect with Dahya on LinkedIn</a></div><div className="about-founder-photo" aria-label="Dahya, founder of Serpo Rank"><img src="/images/dahya-founder.jpeg" alt="Portrait of Dahya, founder of Serpo Rank" loading="eager" fetchPriority="high" decoding="async" /></div></section><section className="certifications-section container"><div className="certifications-copy"><span className="eyebrow">CERTIFICATES</span><h2>My Certifications</h2><p>SEO changes constantly, so I keep learning through structured courses and practical projects. These certifications have helped me build a stronger understanding of search visibility, keyword research, technical SEO, and useful content.</p></div><section className="certificate-carousel" role="region" aria-roledescription="carousel" aria-label="Certifications" tabIndex={0} ref={carouselRef} onKeyDown={handleCarouselKeyDown} onMouseEnter={() => setHovered(true)} onMouseLeave={() => setHovered(false)} onFocus={() => setFocused(true)} onBlur={(event) => { if (!event.currentTarget.contains(event.relatedTarget as Node | null)) setFocused(false); }} onTouchStart={(event) => { touchStartX.current = event.changedTouches[0]?.clientX ?? null; }} onTouchEnd={(event) => { const end = event.changedTouches[0]?.clientX; if (touchStartX.current !== null && end !== undefined && Math.abs(end - touchStartX.current) >= 50) moveCertificate(end < touchStartX.current ? 1 : -1); touchStartX.current = null; }}><div className="certificate-slide-stage" aria-live={autoplayRunning ? 'off' : 'polite'}><figure className="certificate-slide" key={activeCertificate} role="group" aria-roledescription="slide" aria-label={`${activeCertificate + 1} of ${aboutCertificates.length}`}><div className="certificate-frame"><OptimizedImage className={activeCertificate === 4 ? 'cert-zoom' : undefined} src={active.image} alt={active.alt} width={active.width} height={active.height} loading="lazy" sizes="(max-width: 700px) calc(100vw - 40px), 700px" decoding="async" /></div><figcaption>{active.alt}</figcaption></figure></div><div className="certificate-carousel-controls"><button className="certificate-arrow" type="button" aria-label="Previous certificate" onClick={() => moveCertificate(-1)}><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 18-6-6 6-6" /></svg></button><div className="certificate-dots" aria-label="Choose certificate">{aboutCertificates.map((certificate, index) => <button className="certificate-dot" type="button" key={certificate.image} aria-label={`Go to certificate ${index + 1} of ${aboutCertificates.length}`} aria-current={activeCertificate === index ? 'true' : undefined} onClick={() => selectCertificate(index)}><span /></button>)}</div><button className="certificate-arrow" type="button" aria-label="Next certificate" onClick={() => moveCertificate(1)}><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 18 6-6-6-6" /></svg></button><button className="certificate-autoplay" type="button" disabled={reducedMotion} aria-label={reducedMotion ? 'Autoplay disabled because reduced motion is preferred' : autoplayPaused ? 'Play automatic slideshow' : 'Pause automatic slideshow'} onClick={() => setAutoplayPaused((paused) => !paused)}>{reducedMotion ? 'Autoplay off' : autoplayPaused ? 'Play' : 'Pause'}</button></div></section></section></main><Footer /></>;
 }
@@ -1294,7 +1283,7 @@ const websiteOptimisationContent: DetailLandingContent = {
 function DetailLandingPage({ content, pageClass }: { content: DetailLandingContent; pageClass: string }) {
   const isOffPage = pageClass === 'offpage-seo-page';
   return <><SeoMeta title={content.metaTitle} description={content.metaDescription} /><main className={`detail-landing ${pageClass}`}>
-    <section className="detail-hero container"><div className="detail-hero-copy">{!isOffPage && <span className="eyebrow">{content.eyebrow}</span>}<h1>{content.title}</h1><p>{content.heroText}</p><p>{content.heroFollowUp}</p><div className="detail-hero-actions"><Link className="button" to="/seo-audit">Get Your Free SEO Audit <ArrowRight size={17} /></Link><Link className="button button-secondary" to="/services">{isOffPage ? 'Explore Our Other Services' : 'Explore Our Services'} <ArrowRight size={16} /></Link></div></div><div className={`detail-hero-visual${content.heroImage ? '' : ' detail-placeholder'}`}>{content.heroImage ? <OptimizedImage src={content.heroImage} alt={content.heroAlt} fetchPriority="high" decoding="async" /> : <div className="detail-visual-placeholder"><Image size={32} /><span>Hero graphic coming soon</span></div>}</div></section>
+    <section className="detail-hero container"><div className="detail-hero-copy">{!isOffPage && <span className="eyebrow">{content.eyebrow}</span>}<h1>{content.title}</h1><p>{content.heroText}</p><p>{content.heroFollowUp}</p><div className="detail-hero-actions"><Link className="button" to="/seo-audit">Get Your Free SEO Audit <ArrowRight size={17} /></Link><Link className="button button-secondary" to="/">{isOffPage ? 'Explore Our Other Services' : 'Explore Our Services'} <ArrowRight size={16} /></Link></div></div><div className={`detail-hero-visual${content.heroImage ? '' : ' detail-placeholder'}`}>{content.heroImage ? <OptimizedImage src={content.heroImage} alt={content.heroAlt} fetchPriority="high" decoding="async" /> : <div className="detail-visual-placeholder"><Image size={32} /><span>Hero graphic coming soon</span></div>}</div></section>
     <ServiceBriefSections content={isOffPage ? offPageSeoBrief : websiteBrief} />
   </main><Footer /></>;
 }

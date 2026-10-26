@@ -13,4 +13,4 @@ Allow: /
 User-agent: *
 Allow: /
 
-Sitemap: https://serporarank.com/sitemap.xml
+Sitemap: https://serporank.com/sitemap.xml
