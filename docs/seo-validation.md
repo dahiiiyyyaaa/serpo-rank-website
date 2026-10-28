@@ -19,4 +19,14 @@ The first build inspection failed because `/contact/index.html` was empty. The p
 
 The JSON-LD examples in `docs/json-ld/` were extracted from that verified build. These external tests used **code input**, not the existing live URLs, because they preceded publication. They validate markup; they do not establish indexing, rich-result display, rankings or AI citations.
 
-Still needed after deployment: public-URL retests, Search Console URL Inspection/rendered HTML and canonical choice, indexing observation, and enquiry/conversion tracking verification. No enquiry was submitted and no Google indexing request was made during this task.
+## Post-deployment verification
+
+Implementation commit `ff9b8ec46cf601ff72407fd45e75b50b289c2a68` was pushed to `main`. Hosting.com's automatic build succeeded. The existing Node worker continued serving the previous version until its startup command was saved again; after that refresh the new markup was publicly accessible.
+
+- All eight canonical sitemap pages and `/services` returned HTTP 200. Each public graph matched the corresponding verified production graph exactly, with one JSON-LD script, the expected canonical/title, and rendered main heading.
+- The public logo returned HTTP 200, `image/jpeg`, 96,752 bytes. One initial socket-close error was resolved on a fresh request.
+- Google Rich Results Test, **live homepage URL**: **1 valid Organization item**, crawl successful. [Result](https://search.google.com/test/rich-results/result?id=IBSbolzdE5I1aZInSDiMow), [evidence](validation/google-homepage-live.png).
+- Google Rich Results Test, **live local SEO URL**: **2 valid items**, Organization and Breadcrumbs, crawl successful. [Result](https://search.google.com/test/rich-results/result?id=FCisF6bgfONKaSfSy9yGXw), [evidence](validation/google-local-seo-live.png).
+- Browser verification: homepage stylesheet loaded, no completed broken images; clicking Contact replaced the homepage graph with exactly one ContactPage graph. Navigation back to Home worked.
+
+Remaining monitoring / account checks: Search Console URL Inspection/rendered HTML and canonical choice, indexing observation, and enquiry/conversion tracking verification. No enquiry was submitted and no Google indexing request was made during this task. Rich-results validation is not an indexing or ranking guarantee.

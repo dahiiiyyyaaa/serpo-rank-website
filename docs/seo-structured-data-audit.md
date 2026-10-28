@@ -85,8 +85,8 @@ Validation performed and pending is recorded in [seo-validation.md](seo-validati
 Pre-release/release checklist:
 
 - [x] Run [Schema Markup Validator](https://validator.schema.org/) on the generated homepage and local SEO blocks. Both returned **0 errors and 0 warnings** on 27 October 2026. This was a code-snippet test, not a crawl of newly deployed markup.
-- [ ] Run [Rich Results Test](https://search.google.com/test/rich-results) on the homepage and a service page for features that Google actually supports. Service/BusinessAudience/AboutPage/ContactPage need not appear as separate supported results.
-- [ ] After deployment, fetch the public HTML and confirm one graph, correct canonical, working logo URL, and current title/description. Check navigation for stale markup.
+- [x] Run [Rich Results Test](https://search.google.com/test/rich-results) on the homepage and a service page for features that Google actually supports. Live homepage: 1 valid Organization item. Live local SEO page: 2 valid items, Organization and Breadcrumbs. Service/BusinessAudience/AboutPage/ContactPage need not appear as separate supported results. Result links and evidence are in the validation record.
+- [x] After deployment, fetch the public HTML and confirm one graph, correct canonical, working logo URL, and current title/description. All nine public pages matched the verified production graphs. Browser navigation to Contact replaced the homepage graph correctly.
 - [ ] In Search Console URL Inspection, test the home and local SEO URLs live, inspect Google's rendered HTML and canonical choice, then request indexing when appropriate. Monitor the sitemap and indexing/enhancement reports available for the property.
 - [ ] Keep every structured claim consistent with the corresponding public content. Recheck shared facts and pricing when packages change.
 
