@@ -25,6 +25,10 @@ export default defineConfig({
         autoStaticPathsDiscovery: true,
         crawlLinks: true,
         failOnError: true,
+        // Query/fragment variants share one output file with their pathname.
+        // Rendering them concurrently can overwrite /contact/index.html.
+        // Only render the clean URL; plan selections still work at runtime.
+        filter: ({ path }) => !/[?#]/.test(path) && (path === "/" || !path.endsWith("/")),
       },
     }),
     nitro(),

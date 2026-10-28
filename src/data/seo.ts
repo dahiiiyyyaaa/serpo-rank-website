@@ -1,4 +1,7 @@
-export const siteOrigin = 'https://serporank.com';
+import { business, siteOrigin } from './business';
+import { buildStructuredData, canonicalUrl, serializeJsonLd } from './structured-data';
+
+export { siteOrigin } from './business';
 
 export const seoPages = {
   home: {
@@ -55,7 +58,7 @@ export const seoPages = {
 } as const;
 
 export function seoHead(page: (typeof seoPages)[keyof typeof seoPages]) {
-  const canonical = `${siteOrigin}${'canonicalPath' in page ? page.canonicalPath : page.path}`;
+  const canonical = canonicalUrl(page);
   return {
     meta: [
       { title: page.title },
@@ -63,14 +66,22 @@ export function seoHead(page: (typeof seoPages)[keyof typeof seoPages]) {
       { property: 'og:title', content: page.title },
       { property: 'og:description', content: page.description },
       { property: 'og:type', content: 'website' },
+      { property: 'og:site_name', content: business.name },
       { property: 'og:url', content: canonical },
-      { property: 'og:image', content: `${siteOrigin}/images/serpo-rank-official-logo.jpg` },
-      { property: 'og:image:alt', content: 'Serpo Rank logo' },
+      { property: 'og:image', content: `${siteOrigin}${business.logo.path}` },
+      { property: 'og:image:alt', content: `${business.name} logo` },
       { name: 'twitter:card', content: 'summary_large_image' },
       { name: 'twitter:title', content: page.title },
       { name: 'twitter:description', content: page.description },
-      { name: 'twitter:image', content: `${siteOrigin}/images/serpo-rank-official-logo.jpg` },
+      { name: 'twitter:image', content: `${siteOrigin}${business.logo.path}` },
     ],
     links: [{ rel: 'canonical', href: canonical }],
+    // Route-managed head scripts render during SSR/prerendering and are replaced
+    // on navigation. Do not also inject this graph in a component or root route.
+    scripts: [{
+      id: 'serpo-rank-structured-data',
+      type: 'application/ld+json',
+      children: serializeJsonLd(buildStructuredData(page)),
+    }],
   };
 }
