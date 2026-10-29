@@ -12,7 +12,7 @@ export const business = {
   areaServed: 'Worldwide',
   audience: 'Owners and decision-makers at home cleaning businesses',
   logo: {
-    path: '/images/serpo-rank-official-logo.jpg',
+    path: '/images/serpo-rank-official-logo.png',
     width: 2172,
     height: 724,
   },

@@ -1,0 +1,24 @@
+{
+  "originalContentItems": 224,
+  "missingContent": 0,
+  "originalLinks": 35,
+  "preservedDiagrams": 7,
+  "h1Count": 1,
+  "sections": 12,
+  "faqs": 7,
+  "readingTime": 24,
+  "previewOnly": true,
+  "author": "Awaiting confirmation",
+  "publicationDate": "Unpublished",
+  "hero": "Supplied optimized editorial photograph",
+  "graphics": {
+    "supplied": 8,
+    "rasterPlacements": 5,
+    "rebuilt": [
+      6,
+      8
+    ],
+    "removedGraphic": 7,
+    "mobileHTML": true
+  }
+}

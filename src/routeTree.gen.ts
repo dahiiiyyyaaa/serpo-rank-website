@@ -16,6 +16,7 @@ import { Route as PackagesRouteImport } from './routes/packages'
 import { Route as PricingRouteImport } from './routes/pricing'
 import { Route as SeoAuditRouteImport } from './routes/seo-audit'
 import { Route as ServicesRouteImport } from './routes/services'
+import { Route as BlogHouseCleaningSeoGuideRouteImport } from './routes/blog.house-cleaning-seo-guide'
 import { Route as ServicesIndexRouteImport } from './routes/services.index'
 import { Route as ServicesLocalSeoRouteImport } from './routes/services.local-seo'
 import { Route as ServicesOffPageSeoRouteImport } from './routes/services.off-page-seo'
@@ -59,6 +60,12 @@ const ServicesRoute = ServicesRouteImport.update({
   path: '/services',
   getParentRoute: () => rootRouteImport,
 } as any)
+const BlogHouseCleaningSeoGuideRoute =
+  BlogHouseCleaningSeoGuideRouteImport.update({
+    id: '/blog/house-cleaning-seo-guide',
+    path: '/blog/house-cleaning-seo-guide',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const ServicesIndexRoute = ServicesIndexRouteImport.update({
   id: '/',
   path: '/',
@@ -104,6 +111,7 @@ export interface FileRoutesByFullPath {
   '/pricing': typeof PricingRoute
   '/seo-audit': typeof SeoAuditRoute
   '/services': typeof ServicesRouteWithChildren
+  '/blog/house-cleaning-seo-guide': typeof BlogHouseCleaningSeoGuideRoute
   '/services/local-seo': typeof ServicesLocalSeoRoute
   '/services/off-page-seo': typeof ServicesOffPageSeoRoute
   '/services/on-page-seo': typeof ServicesOnPageSeoRoute
@@ -119,6 +127,7 @@ export interface FileRoutesByTo {
   '/packages': typeof PackagesRoute
   '/pricing': typeof PricingRoute
   '/seo-audit': typeof SeoAuditRoute
+  '/blog/house-cleaning-seo-guide': typeof BlogHouseCleaningSeoGuideRoute
   '/services/local-seo': typeof ServicesLocalSeoRoute
   '/services/off-page-seo': typeof ServicesOffPageSeoRoute
   '/services/on-page-seo': typeof ServicesOnPageSeoRoute
@@ -136,6 +145,7 @@ export interface FileRoutesById {
   '/pricing': typeof PricingRoute
   '/seo-audit': typeof SeoAuditRoute
   '/services': typeof ServicesRouteWithChildren
+  '/blog/house-cleaning-seo-guide': typeof BlogHouseCleaningSeoGuideRoute
   '/services/local-seo': typeof ServicesLocalSeoRoute
   '/services/off-page-seo': typeof ServicesOffPageSeoRoute
   '/services/on-page-seo': typeof ServicesOnPageSeoRoute
@@ -154,6 +164,7 @@ export interface FileRouteTypes {
     | '/pricing'
     | '/seo-audit'
     | '/services'
+    | '/blog/house-cleaning-seo-guide'
     | '/services/local-seo'
     | '/services/off-page-seo'
     | '/services/on-page-seo'
@@ -169,6 +180,7 @@ export interface FileRouteTypes {
     | '/packages'
     | '/pricing'
     | '/seo-audit'
+    | '/blog/house-cleaning-seo-guide'
     | '/services/local-seo'
     | '/services/off-page-seo'
     | '/services/on-page-seo'
@@ -185,6 +197,7 @@ export interface FileRouteTypes {
     | '/pricing'
     | '/seo-audit'
     | '/services'
+    | '/blog/house-cleaning-seo-guide'
     | '/services/local-seo'
     | '/services/off-page-seo'
     | '/services/on-page-seo'
@@ -202,6 +215,7 @@ export interface RootRouteChildren {
   PricingRoute: typeof PricingRoute
   SeoAuditRoute: typeof SeoAuditRoute
   ServicesRoute: typeof ServicesRouteWithChildren
+  BlogHouseCleaningSeoGuideRoute: typeof BlogHouseCleaningSeoGuideRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -253,6 +267,13 @@ declare module '@tanstack/react-router' {
       path: '/services'
       fullPath: '/services'
       preLoaderRoute: typeof ServicesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/blog/house-cleaning-seo-guide': {
+      id: '/blog/house-cleaning-seo-guide'
+      path: '/blog/house-cleaning-seo-guide'
+      fullPath: '/blog/house-cleaning-seo-guide'
+      preLoaderRoute: typeof BlogHouseCleaningSeoGuideRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/services/': {
@@ -339,6 +360,7 @@ const rootRouteChildren: RootRouteChildren = {
   PricingRoute: PricingRoute,
   SeoAuditRoute: SeoAuditRoute,
   ServicesRoute: ServicesRouteWithChildren,
+  BlogHouseCleaningSeoGuideRoute: BlogHouseCleaningSeoGuideRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

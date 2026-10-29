@@ -1,0 +1,179 @@
+{
+  "1": {
+    "name": "sunlit-towels-and-botanical-cleaning-vignette",
+    "original": "ChatGPT Image Oct 28, 2026, 11_11_18 PM-1.png",
+    "width": 1448,
+    "height": 1086,
+    "originalBytes": 1931930,
+    "variants": [
+      {
+        "width": 480,
+        "src": "assets/sunlit-towels-and-botanical-cleaning-vignette-480.webp",
+        "bytes": 34542
+      },
+      {
+        "width": 768,
+        "src": "assets/sunlit-towels-and-botanical-cleaning-vignette-768.webp",
+        "bytes": 66406
+      },
+      {
+        "width": 1200,
+        "src": "assets/sunlit-towels-and-botanical-cleaning-vignette-1200.webp",
+        "bytes": 122016
+      },
+      {
+        "width": 1448,
+        "src": "assets/sunlit-towels-and-botanical-cleaning-vignette-1448.webp",
+        "bytes": 155106
+      }
+    ],
+    "treatment": "responsive WebP"
+  },
+  "2": {
+    "name": "keyword-intent-mapped-to-content-types",
+    "original": "ChatGPT Image Oct 28, 2026, 11_11_30 PM-2.png",
+    "width": 1448,
+    "height": 1086,
+    "originalBytes": 1424208,
+    "variants": [
+      {
+        "width": 480,
+        "src": "assets/keyword-intent-mapped-to-content-types-480.webp",
+        "bytes": 28222
+      },
+      {
+        "width": 768,
+        "src": "assets/keyword-intent-mapped-to-content-types-768.webp",
+        "bytes": 52510
+      },
+      {
+        "width": 1200,
+        "src": "assets/keyword-intent-mapped-to-content-types-1200.webp",
+        "bytes": 99162
+      },
+      {
+        "width": 1448,
+        "src": "assets/keyword-intent-mapped-to-content-types-1448.webp",
+        "bytes": 127454
+      }
+    ],
+    "treatment": "responsive WebP"
+  },
+  "3": {
+    "name": "home-cleaning-profile-optimization-guide",
+    "original": "ChatGPT Image Oct 28, 2026, 11_12_23 PM-3.png",
+    "width": 1448,
+    "height": 1086,
+    "originalBytes": 1849107,
+    "variants": [
+      {
+        "width": 480,
+        "src": "assets/home-cleaning-profile-optimization-guide-480.webp",
+        "bytes": 42744
+      },
+      {
+        "width": 768,
+        "src": "assets/home-cleaning-profile-optimization-guide-768.webp",
+        "bytes": 86146
+      },
+      {
+        "width": 1200,
+        "src": "assets/home-cleaning-profile-optimization-guide-1200.webp",
+        "bytes": 164864
+      },
+      {
+        "width": 1448,
+        "src": "assets/home-cleaning-profile-optimization-guide-1448.webp",
+        "bytes": 175614
+      }
+    ],
+    "treatment": "responsive WebP"
+  },
+  "4": {
+    "name": "recommended-website-structure-diagram",
+    "original": "ChatGPT Image Oct 28, 2026, 11_12_47 PM-4.png",
+    "width": 1448,
+    "height": 1086,
+    "originalBytes": 1391400,
+    "variants": [
+      {
+        "width": 480,
+        "src": "assets/recommended-website-structure-diagram-480.webp",
+        "bytes": 19876
+      },
+      {
+        "width": 768,
+        "src": "assets/recommended-website-structure-diagram-768.webp",
+        "bytes": 39242
+      },
+      {
+        "width": 1200,
+        "src": "assets/recommended-website-structure-diagram-1200.webp",
+        "bytes": 76796
+      },
+      {
+        "width": 1448,
+        "src": "assets/recommended-website-structure-diagram-1448.webp",
+        "bytes": 102764
+      }
+    ],
+    "treatment": "responsive WebP"
+  },
+  "5": {
+    "name": "understanding-core-web-vitals",
+    "original": "ChatGPT Image Oct 28, 2026, 11_13_02 PM-5.png",
+    "width": 1448,
+    "height": 1086,
+    "originalBytes": 1439567,
+    "variants": [
+      {
+        "width": 480,
+        "src": "assets/understanding-core-web-vitals-480.webp",
+        "bytes": 27814
+      },
+      {
+        "width": 768,
+        "src": "assets/understanding-core-web-vitals-768.webp",
+        "bytes": 53572
+      },
+      {
+        "width": 1200,
+        "src": "assets/understanding-core-web-vitals-1200.webp",
+        "bytes": 99626
+      },
+      {
+        "width": 1448,
+        "src": "assets/understanding-core-web-vitals-1448.webp",
+        "bytes": 128956
+      }
+    ],
+    "treatment": "responsive WebP"
+  },
+  "6": {
+    "name": "reliable-customer-review-workflow",
+    "original": "ChatGPT Image Oct 28, 2026, 11_13_37 PM-6.png",
+    "width": 1448,
+    "height": 1086,
+    "originalBytes": 1535805,
+    "variants": [],
+    "treatment": "rebuilt as accessible HTML"
+  },
+  "7": {
+    "name": "from-seo-visibility-to-revenue",
+    "original": "ChatGPT Image Oct 28, 2026, 11_13_47 PM-7.png",
+    "width": 1448,
+    "height": 1086,
+    "originalBytes": 1490474,
+    "variants": [],
+    "treatment": "removed from page"
+  },
+  "8": {
+    "name": "cleaning-website-audit-comparison-table",
+    "original": "ChatGPT Image Oct 28, 2026, 11_13_53 PM-8.png",
+    "width": 1448,
+    "height": 1086,
+    "originalBytes": 1877425,
+    "variants": [],
+    "treatment": "rebuilt as accessible HTML"
+  }
+}

@@ -1,7 +1,7 @@
-import { createFileRoute } from "@tanstack/react-router";
-import { Services } from "@/components/site/pages";
-import { seoHead, seoPages } from "@/data/seo";
+import { createFileRoute, redirect } from "@tanstack/react-router";
+
 export const Route = createFileRoute("/services/")({
- component: Services,
- head: () => seoHead(seoPages.services),
+ beforeLoad: () => {
+   throw redirect({ to: "/", hash: "our-seo-services" });
+ },
 });

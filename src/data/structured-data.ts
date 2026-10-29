@@ -181,6 +181,41 @@ export function buildStructuredData(page: PageMetadata): StructuredDataGraph {
   return { '@context': 'https://schema.org', '@graph': graph };
 }
 
+/** Reuse the site's entities for an editorial guide without inventing an author or release date. */
+export function buildGuideStructuredData(page: PageMetadata, headline: string): StructuredDataGraph {
+  const graph = buildStructuredData(page);
+  const url = canonicalUrl(page);
+  const webpage = graph['@graph'].find((node) => node['@id'] === `${url}#webpage`);
+  if (!webpage) throw new Error('Guide WebPage schema is missing');
+  webpage['mainEntity'] = reference(`${url}#article`);
+  webpage['breadcrumb'] = reference(`${url}#breadcrumb`);
+  graph['@graph'].push({
+    '@type': 'BlogPosting',
+    '@id': `${url}#article`,
+    headline,
+    description: page.description,
+    url,
+    inLanguage: business.language,
+    mainEntityOfPage: reference(`${url}#webpage`),
+    publisher: reference(entityIds.organization),
+    image: {
+      '@type': 'ImageObject',
+      url: `${siteOrigin}/images/blog/sunlit-towels-and-botanical-cleaning-vignette-1200.webp`,
+      width: 1200,
+      height: 900,
+    },
+    isAccessibleForFree: true,
+  }, {
+    '@type': 'BreadcrumbList',
+    '@id': `${url}#breadcrumb`,
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: `${siteOrigin}/` },
+      { '@type': 'ListItem', position: 2, name: 'House Cleaning SEO Guide', item: url },
+    ],
+  });
+  return graph;
+}
+
 /** Escape HTML-significant characters before embedding JSON in a script tag. */
 export function serializeJsonLd(value: unknown): string {
   const json = JSON.stringify(value);

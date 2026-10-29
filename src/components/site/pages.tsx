@@ -1,4 +1,5 @@
 import { OptimizedImage } from '@/components/site/optimized-image';
+import { FeaturedGuide } from '@/components/site/featured-guide';
 import { lazy, Suspense, useEffect, useRef, useState } from 'react';
 import { SiteLink as Link, SiteNavLink as NavLink, useSiteLocation as useLocation } from '@/components/site/navigation';
 import { Button } from '@/components/ui/button';
@@ -346,6 +347,8 @@ export function Services() {
       </section>
 
       <FounderCard hideEyebrow />
+
+      <FeaturedGuide />
 
       <section className="container services-reviews" aria-labelledby="services-reviews-title">
         <div className="services-reviews-heading">
@@ -1283,7 +1286,7 @@ const websiteOptimisationContent: DetailLandingContent = {
 function DetailLandingPage({ content, pageClass }: { content: DetailLandingContent; pageClass: string }) {
   const isOffPage = pageClass === 'offpage-seo-page';
   return <><SeoMeta title={content.metaTitle} description={content.metaDescription} /><main className={`detail-landing ${pageClass}`}>
-    <section className="detail-hero container"><div className="detail-hero-copy">{!isOffPage && <span className="eyebrow">{content.eyebrow}</span>}<h1>{content.title}</h1><p>{content.heroText}</p><p>{content.heroFollowUp}</p><div className="detail-hero-actions"><Link className="button" to="/seo-audit">Get Your Free SEO Audit <ArrowRight size={17} /></Link><Link className="button button-secondary" to="/">{isOffPage ? 'Explore Our Other Services' : 'Explore Our Services'} <ArrowRight size={16} /></Link></div></div><div className={`detail-hero-visual${content.heroImage ? '' : ' detail-placeholder'}`}>{content.heroImage ? <OptimizedImage src={content.heroImage} alt={content.heroAlt} fetchPriority="high" decoding="async" /> : <div className="detail-visual-placeholder"><Image size={32} /><span>Hero graphic coming soon</span></div>}</div></section>
+    <section className="detail-hero container"><div className="detail-hero-copy">{!isOffPage && <span className="eyebrow">{content.eyebrow}</span>}<h1>{content.title}</h1><p>{content.heroText}</p><p>{content.heroFollowUp}</p><div className="detail-hero-actions"><Link className="button" to="/seo-audit">Get Your Free SEO Audit <ArrowRight size={17} /></Link><Link className="button button-secondary" to="/" hash="our-seo-services">{isOffPage ? 'Explore Our Other Services' : 'Explore Our Services'} <ArrowRight size={16} /></Link></div></div><div className={`detail-hero-visual${content.heroImage ? '' : ' detail-placeholder'}`}>{content.heroImage ? <OptimizedImage src={content.heroImage} alt={content.heroAlt} fetchPriority="high" decoding="async" /> : <div className="detail-visual-placeholder"><Image size={32} /><span>Hero graphic coming soon</span></div>}</div></section>
     <ServiceBriefSections content={isOffPage ? offPageSeoBrief : websiteBrief} />
   </main><Footer /></>;
 }
