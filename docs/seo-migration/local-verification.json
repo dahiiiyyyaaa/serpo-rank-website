@@ -1,0 +1,219 @@
+{
+  "origin": "http://127.0.0.1:8095",
+  "checkedAt": "2026-11-03T04:50:28.074Z",
+  "pages": [
+    {
+      "path": "/seo-for-home-cleaning-businesses/",
+      "status": 200,
+      "canonical": "https://serporank.com/seo-for-home-cleaning-businesses/",
+      "words": 1341,
+      "h2": 11,
+      "headingJumps": []
+    },
+    {
+      "path": "/packages",
+      "status": 200,
+      "canonical": "https://serporank.com/packages",
+      "words": 363,
+      "h2": 4,
+      "headingJumps": []
+    },
+    {
+      "path": "/about",
+      "status": 200,
+      "canonical": "https://serporank.com/about",
+      "words": 229,
+      "h2": 1,
+      "headingJumps": []
+    },
+    {
+      "path": "/contact",
+      "status": 200,
+      "canonical": "https://serporank.com/contact",
+      "words": 157,
+      "h2": 2,
+      "headingJumps": []
+    },
+    {
+      "path": "/services/technical-seo",
+      "status": 200,
+      "canonical": "https://serporank.com/services/technical-seo",
+      "words": 1500,
+      "h2": 7,
+      "headingJumps": []
+    },
+    {
+      "path": "/services/local-seo",
+      "status": 200,
+      "canonical": "https://serporank.com/services/local-seo",
+      "words": 1181,
+      "h2": 6,
+      "headingJumps": []
+    },
+    {
+      "path": "/services/on-page-seo",
+      "status": 200,
+      "canonical": "https://serporank.com/services/on-page-seo",
+      "words": 2046,
+      "h2": 7,
+      "headingJumps": []
+    },
+    {
+      "path": "/services/off-page-seo",
+      "status": 200,
+      "canonical": "https://serporank.com/services/off-page-seo",
+      "words": 1887,
+      "h2": 7,
+      "headingJumps": []
+    },
+    {
+      "path": "/blog/house-cleaning-seo-guide",
+      "status": 200,
+      "canonical": "https://serporank.com/blog/house-cleaning-seo-guide",
+      "words": 5402,
+      "h2": 12,
+      "headingJumps": []
+    },
+    {
+      "path": "/contact?service=consultation",
+      "status": 200,
+      "canonical": "https://serporank.com/contact"
+    },
+    {
+      "path": "/contact?service=packages&plan=foundation",
+      "status": 200,
+      "canonical": "https://serporank.com/contact"
+    },
+    {
+      "path": "/contact?service=packages&plan=growth",
+      "status": 200,
+      "canonical": "https://serporank.com/contact"
+    },
+    {
+      "path": "/contact?service=packages&plan=expansion",
+      "status": 200,
+      "canonical": "https://serporank.com/contact"
+    }
+  ],
+  "redirects": [
+    {
+      "path": "/",
+      "status": 301,
+      "to": "/seo-for-home-cleaning-businesses/"
+    },
+    {
+      "path": "/seo-for-home-cleaning-businesses",
+      "status": 301,
+      "to": "/seo-for-home-cleaning-businesses/"
+    },
+    {
+      "path": "/services",
+      "status": 301,
+      "to": "/seo-for-home-cleaning-businesses/#our-seo-services"
+    },
+    {
+      "path": "/services/",
+      "status": 301,
+      "to": "/seo-for-home-cleaning-businesses/#our-seo-services"
+    },
+    {
+      "path": "/seo-audit",
+      "status": 301,
+      "to": "/seo-for-home-cleaning-businesses/#book-free-audit"
+    },
+    {
+      "path": "/seo-audit/",
+      "status": 301,
+      "to": "/seo-for-home-cleaning-businesses/#book-free-audit"
+    },
+    {
+      "path": "/services/seo-audits",
+      "status": 301,
+      "to": "/seo-for-home-cleaning-businesses/#book-free-audit"
+    },
+    {
+      "path": "/services/website-development",
+      "status": 301,
+      "to": "/seo-for-home-cleaning-businesses/"
+    }
+  ],
+  "resources": [
+    {
+      "path": "/images/optimized/serpo-rank-official-logo-1440.webp",
+      "bytes": 13788
+    },
+    {
+      "path": "/images/optimized/services-hero-1774.webp",
+      "bytes": 97374
+    },
+    {
+      "path": "/images/dahya-founder.jpeg",
+      "bytes": 317911
+    },
+    {
+      "path": "/images/optimized/serpo_rank_featured_blog_photo-1200.webp",
+      "bytes": 73606
+    },
+    {
+      "path": "/assets/styles-C6Z3aeA7.css",
+      "bytes": 227025
+    },
+    {
+      "path": "/assets/index-BtgaXPta.js",
+      "bytes": 582936
+    },
+    {
+      "path": "/images/optimized/pricing-seo-blog-bonus-1200.webp",
+      "bytes": 94678
+    },
+    {
+      "path": "/images/optimized/certificate-local-seo-1179.webp",
+      "bytes": 47954
+    },
+    {
+      "path": "/images/technical-seo-hero.webp",
+      "bytes": 25196
+    },
+    {
+      "path": "/images/local-seo-hero.webp",
+      "bytes": 82284
+    },
+    {
+      "path": "/images/optimized/on-page-seo-hero-1774.webp",
+      "bytes": 67554
+    },
+    {
+      "path": "/images/optimized/off-page-seo-hero-1774.webp",
+      "bytes": 73648
+    },
+    {
+      "path": "/images/blog/serpo-rank-icon.png",
+      "bytes": 19478
+    },
+    {
+      "path": "/images/blog/sunlit-towels-and-botanical-cleaning-vignette-1200.webp",
+      "bytes": 82120
+    },
+    {
+      "path": "/images/blog/keyword-intent-mapped-to-content-types-1200.webp",
+      "bytes": 99162
+    },
+    {
+      "path": "/images/blog/home-cleaning-profile-optimization-guide-1200.webp",
+      "bytes": 83058
+    },
+    {
+      "path": "/images/blog/recommended-website-structure-diagram-1200.webp",
+      "bytes": 76796
+    },
+    {
+      "path": "/images/blog/understanding-core-web-vitals-1200.webp",
+      "bytes": 99626
+    },
+    {
+      "path": "/assets/house-cleaning-guide-D3CyLVtq.css",
+      "bytes": 29603
+    }
+  ],
+  "external": []
+}

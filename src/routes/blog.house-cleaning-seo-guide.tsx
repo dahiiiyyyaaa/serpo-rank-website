@@ -18,7 +18,6 @@ export const Route = createFileRoute('/blog/house-cleaning-seo-guide')({
     meta: [
       { title: guidePage.title },
       { name: 'description', content: guidePage.description },
-      { name: 'robots', content: 'noindex,nofollow' },
       { property: 'og:title', content: guidePage.title },
       { property: 'og:description', content: guidePage.description },
       { property: 'og:type', content: 'article' },

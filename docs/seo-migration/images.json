@@ -1,0 +1,39 @@
+[
+  {
+    "path": "public/images/optimized/services-hero-1774.webp",
+    "before": 115168,
+    "after": 97374,
+    "width": 1774,
+    "height": 887,
+    "quality": 82
+  },
+  {
+    "path": "public/images/optimized/pricing-seo-blog-bonus-1200.webp",
+    "before": 102980,
+    "after": 94678,
+    "width": 1200,
+    "height": 521,
+    "quality": 82
+  },
+  {
+    "path": "public/images/blog/home-cleaning-profile-optimization-guide-1200.webp",
+    "before": 164864,
+    "after": 83058,
+    "width": 1200,
+    "height": 900,
+    "quality": 80
+  },
+  {
+    "path": "public/images/blog/sunlit-towels-and-botanical-cleaning-vignette-1200.webp",
+    "before": 122016,
+    "after": 82120,
+    "width": 1200,
+    "height": 900,
+    "quality": 82
+  },
+  {
+    "path": "public\\images\\dahya-founder.jpeg",
+    "unchanged": true,
+    "sha256": "615f71c618bcf5a94276d9a70924dce9d3f0494ae09d6cc150e6f4284045f586"
+  }
+]

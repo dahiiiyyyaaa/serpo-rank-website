@@ -78,7 +78,7 @@ describe('Structured data', () => {
     );
     const router = createRouter({
       routeTree: root.addChildren(routes),
-      history: createMemoryHistory({ initialEntries: ['/'] }),
+      history: createMemoryHistory({ initialEntries: [seoPages.home.path] }),
     });
     const view = render(<RouterProvider router={router} />);
     try {

@@ -42,7 +42,7 @@ Broken URLs, redirect problems, and incorrect indexing directives can make your 
 
 **Structured Data**
 
-Appropriate structured data helps search engines interpret information about your business and website. For cleaning companies, this may include supported local business information, provided it accurately represents the business.
+Structured data helps search engines understand your business and website. For a cleaning company, it may describe local business details. Those details must be supported and accurately describe the business.
 
 Technical SEO focuses on your website's technical foundation. Content writing, backlink acquisition, paid advertising, and Google Business Profile management are separate services unless your package explicitly includes them.
 

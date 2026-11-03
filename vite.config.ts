@@ -28,10 +28,10 @@ export default defineConfig({
         // Query/fragment variants share one output file with their pathname.
         // Rendering them concurrently can overwrite /contact/index.html.
         // Only render the clean URL; plan selections still work at runtime.
-        filter: ({ path }) => !/[?#]/.test(path) && (path === "/" || !path.endsWith("/")),
+        filter: ({ path }) => !/[?#]/.test(path) && (path === "/seo-for-home-cleaning-businesses/" || (!path.endsWith("/") && !["/services", "/seo-audit", "/seo-for-home-cleaning-businesses", "/services/seo-audits", "/services/website-development"].includes(path))),
       },
     }),
-    nitro(),
+    nitro({ plugins: ["./server/plugins/site-policy.ts"] }),
     viteReact(),
   ],
 });

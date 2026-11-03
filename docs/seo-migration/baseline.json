@@ -1,0 +1,420 @@
+[
+  {
+    "path": "/",
+    "words": 1333,
+    "h2": 11,
+    "images": [
+      {
+        "src": "/images/optimized/serpo-rank-official-logo-1440.webp",
+        "alt": ""
+      },
+      {
+        "src": "/images/optimized/services-hero-1774.webp",
+        "alt": "Illustration of local search visibility, home cleaning services, and nearby customers"
+      },
+      {
+        "src": "/images/dahya-founder.jpeg",
+        "alt": "Portrait of Dahya, founder of Serpo Rank"
+      },
+      {
+        "src": "/images/optimized/serpo_rank_featured_blog_photo-1200.webp",
+        "alt": "Sage cleaning spray, folded towel, notebook and pen on a sunlit counter"
+      },
+      {
+        "src": "/images/optimized/serpo-rank-official-logo-1440.webp",
+        "alt": ""
+      }
+    ],
+    "emptyLinks": [
+      {
+        "href": "/",
+        "label": "Serpo Rank home",
+        "alt": ""
+      },
+      {
+        "href": "/blog/house-cleaning-seo-guide",
+        "label": "Read The Complete SEO Guide for Home Cleaning Businesses",
+        "alt": "Sage cleaning spray, folded towel, notebook and pen on a sunlit counter"
+      },
+      {
+        "href": "/",
+        "label": "Serpo Rank home",
+        "alt": ""
+      },
+      {
+        "href": "https://www.linkedin.com/in/dahya-butt-414521411",
+        "label": "LinkedIn"
+      }
+    ],
+    "external": [
+      "https://www.linkedin.com/in/dahya-butt-414521411",
+      "https://calendly.com/dahiyabutt28/new-meeting"
+    ]
+  },
+  {
+    "path": "/packages",
+    "words": 363,
+    "h2": 4,
+    "images": [
+      {
+        "src": "/images/optimized/serpo-rank-official-logo-1440.webp",
+        "alt": ""
+      },
+      {
+        "src": "/images/pricing-seo-blog-bonus.webp",
+        "alt": "Sage-green gift box with two SEO article cards and botanical leaves"
+      },
+      {
+        "src": "/images/optimized/serpo-rank-official-logo-1440.webp",
+        "alt": ""
+      }
+    ],
+    "emptyLinks": [
+      {
+        "href": "/",
+        "label": "Serpo Rank home",
+        "alt": ""
+      },
+      {
+        "href": "/",
+        "label": "Serpo Rank home",
+        "alt": ""
+      },
+      {
+        "href": "https://www.linkedin.com/in/dahya-butt-414521411",
+        "label": "LinkedIn"
+      }
+    ],
+    "external": [
+      "https://www.linkedin.com/in/dahya-butt-414521411"
+    ]
+  },
+  {
+    "path": "/about",
+    "words": 229,
+    "h2": 1,
+    "images": [
+      {
+        "src": "/images/optimized/serpo-rank-official-logo-1440.webp",
+        "alt": ""
+      },
+      {
+        "src": "/images/dahya-founder.jpeg",
+        "alt": "Portrait of Dahya, founder of Serpo Rank"
+      },
+      {
+        "src": "/images/optimized/certificate-local-seo-1179.webp",
+        "alt": "Local SEO Essentials with Semrush certificate"
+      },
+      {
+        "src": "/images/optimized/serpo-rank-official-logo-1440.webp",
+        "alt": ""
+      }
+    ],
+    "emptyLinks": [
+      {
+        "href": "/",
+        "label": "Serpo Rank home",
+        "alt": ""
+      },
+      {
+        "href": "/",
+        "label": "Serpo Rank home",
+        "alt": ""
+      },
+      {
+        "href": "https://www.linkedin.com/in/dahya-butt-414521411",
+        "label": "LinkedIn"
+      }
+    ],
+    "external": [
+      "https://www.linkedin.com/in/dahya-butt-414521411"
+    ]
+  },
+  {
+    "path": "/contact",
+    "words": 157,
+    "h2": 2,
+    "images": [
+      {
+        "src": "/images/optimized/serpo-rank-official-logo-1440.webp",
+        "alt": ""
+      },
+      {
+        "src": "/images/optimized/serpo-rank-official-logo-1440.webp",
+        "alt": ""
+      }
+    ],
+    "emptyLinks": [
+      {
+        "href": "/",
+        "label": "Serpo Rank home",
+        "alt": ""
+      },
+      {
+        "href": "/",
+        "label": "Serpo Rank home",
+        "alt": ""
+      },
+      {
+        "href": "https://www.linkedin.com/in/dahya-butt-414521411",
+        "label": "LinkedIn"
+      }
+    ],
+    "external": [
+      "https://calendly.com/dahiyabutt28/new-meeting",
+      "https://www.linkedin.com/in/dahya-butt-414521411"
+    ]
+  },
+  {
+    "path": "/services/local-seo",
+    "words": 1181,
+    "h2": 6,
+    "images": [
+      {
+        "src": "/images/optimized/serpo-rank-official-logo-1440.webp",
+        "alt": ""
+      },
+      {
+        "src": "/images/local-seo-hero.webp",
+        "alt": "Local search results and map pins helping customers find a home cleaning business"
+      },
+      {
+        "src": "/images/dahya-founder.jpeg",
+        "alt": "Portrait of Dahya, founder of Serpo Rank"
+      },
+      {
+        "src": "/images/optimized/serpo-rank-official-logo-1440.webp",
+        "alt": ""
+      }
+    ],
+    "emptyLinks": [
+      {
+        "href": "/",
+        "label": "Serpo Rank home",
+        "alt": ""
+      },
+      {
+        "href": "/",
+        "label": "Serpo Rank home",
+        "alt": ""
+      },
+      {
+        "href": "https://www.linkedin.com/in/dahya-butt-414521411",
+        "label": "LinkedIn"
+      }
+    ],
+    "external": [
+      "https://www.linkedin.com/in/dahya-butt-414521411"
+    ]
+  },
+  {
+    "path": "/services/on-page-seo",
+    "words": 2046,
+    "h2": 7,
+    "images": [
+      {
+        "src": "/images/optimized/serpo-rank-official-logo-1440.webp",
+        "alt": ""
+      },
+      {
+        "src": "/images/optimized/on-page-seo-hero-1774.webp",
+        "alt": "Illustration of a home cleaning website with search and page optimization elements"
+      },
+      {
+        "src": "/images/dahya-founder.jpeg",
+        "alt": "Portrait of Dahya, founder of Serpo Rank"
+      },
+      {
+        "src": "/images/optimized/serpo-rank-official-logo-1440.webp",
+        "alt": ""
+      }
+    ],
+    "emptyLinks": [
+      {
+        "href": "/",
+        "label": "Serpo Rank home",
+        "alt": ""
+      },
+      {
+        "href": "/",
+        "label": "Serpo Rank home",
+        "alt": ""
+      },
+      {
+        "href": "https://www.linkedin.com/in/dahya-butt-414521411",
+        "label": "LinkedIn"
+      }
+    ],
+    "external": [
+      "https://www.linkedin.com/in/dahya-butt-414521411"
+    ]
+  },
+  {
+    "path": "/services/off-page-seo",
+    "words": 1886,
+    "h2": 7,
+    "images": [
+      {
+        "src": "/images/optimized/serpo-rank-official-logo-1440.webp",
+        "alt": ""
+      },
+      {
+        "src": "/images/optimized/off-page-seo-hero-1774.webp",
+        "alt": "Illustration of backlinks, local business listings, and online mentions for a home cleaning business"
+      },
+      {
+        "src": "/images/dahya-founder.jpeg",
+        "alt": "Portrait of Dahya, founder of Serpo Rank"
+      },
+      {
+        "src": "/images/optimized/serpo-rank-official-logo-1440.webp",
+        "alt": ""
+      }
+    ],
+    "emptyLinks": [
+      {
+        "href": "/",
+        "label": "Serpo Rank home",
+        "alt": ""
+      },
+      {
+        "href": "/",
+        "label": "Serpo Rank home",
+        "alt": ""
+      },
+      {
+        "href": "https://www.linkedin.com/in/dahya-butt-414521411",
+        "label": "LinkedIn"
+      }
+    ],
+    "external": [
+      "https://www.linkedin.com/in/dahya-butt-414521411"
+    ]
+  },
+  {
+    "path": "/services/technical-seo",
+    "words": 1499,
+    "h2": 7,
+    "images": [
+      {
+        "src": "/images/optimized/serpo-rank-official-logo-1440.webp",
+        "alt": ""
+      },
+      {
+        "src": "/images/technical-seo-hero.webp",
+        "alt": "Technical SEO illustration showing website crawling, indexing, performance, and structure"
+      },
+      {
+        "src": "/images/dahya-founder.jpeg",
+        "alt": "Portrait of Dahya, founder of Serpo Rank"
+      },
+      {
+        "src": "/images/optimized/serpo-rank-official-logo-1440.webp",
+        "alt": ""
+      }
+    ],
+    "emptyLinks": [
+      {
+        "href": "/",
+        "label": "Serpo Rank home",
+        "alt": ""
+      },
+      {
+        "href": "/",
+        "label": "Serpo Rank home",
+        "alt": ""
+      },
+      {
+        "href": "https://www.linkedin.com/in/dahya-butt-414521411",
+        "label": "LinkedIn"
+      }
+    ],
+    "external": [
+      "https://www.linkedin.com/in/dahya-butt-414521411"
+    ]
+  },
+  {
+    "path": "/blog/house-cleaning-seo-guide",
+    "words": 5402,
+    "robots": "noindex,nofollow",
+    "h2": 12,
+    "images": [
+      {
+        "src": "/images/optimized/serpo-rank-official-logo-1440.webp",
+        "alt": ""
+      },
+      {
+        "src": "/images/blog/serpo-rank-icon.png",
+        "alt": ""
+      },
+      {
+        "src": "/images/blog/sunlit-towels-and-botanical-cleaning-vignette-1200.webp",
+        "alt": "Folded towels, an amber cleaning bottle and leafy stems beside an illustrative visibility, enquiries and bookings panel"
+      },
+      {
+        "src": "/images/blog/keyword-intent-mapped-to-content-types-1200.webp",
+        "alt": "Keyword intent mapped to awareness, consideration and hiring-ready page types"
+      },
+      {
+        "src": "/images/blog/home-cleaning-profile-optimization-guide-1200.webp",
+        "alt": "Illustrative home-cleaning business profile with category, contact, photos, services and review checks"
+      },
+      {
+        "src": "/images/blog/recommended-website-structure-diagram-1200.webp",
+        "alt": "Recommended homepage structure linking service pages, genuine coverage pages and supporting information"
+      },
+      {
+        "src": "/images/blog/understanding-core-web-vitals-1200.webp",
+        "alt": "Core Web Vitals: Largest Contentful Paint, Interaction to Next Paint and Cumulative Layout Shift"
+      },
+      {
+        "src": "/images/optimized/serpo-rank-official-logo-1440.webp",
+        "alt": ""
+      }
+    ],
+    "emptyLinks": [
+      {
+        "href": "/",
+        "label": "Serpo Rank home",
+        "alt": ""
+      },
+      {
+        "href": "/",
+        "label": "Serpo Rank home",
+        "alt": ""
+      },
+      {
+        "href": "https://www.linkedin.com/in/dahya-butt-414521411",
+        "label": "LinkedIn"
+      }
+    ],
+    "external": [
+      "https://support.google.com/business/answer/7091?hl=en-en",
+      "https://support.google.com/business/answer/3038177?hl=en",
+      "https://support.google.com/business/answer/9157481?hl=en",
+      "https://developers.google.com/search/docs/appearance/snippet",
+      "https://developers.google.com/search/blog/2009/09/google-does-not-use-keywords-meta-tag",
+      "https://developers.google.com/search/docs/fundamentals/seo-starter-guide",
+      "https://developers.google.com/search/docs/crawling-indexing/sitemaps/overview",
+      "https://developers.google.com/search/docs/crawling-indexing/robots/intro",
+      "https://developers.google.com/search/docs/crawling-indexing/block-indexing",
+      "https://developers.google.com/search/docs/crawling-indexing/consolidate-duplicate-urls",
+      "https://web.dev/articles/vitals",
+      "https://developers.google.com/speed/docs/insights/v5/about",
+      "https://developers.google.com/search/docs/appearance/structured-data/sd-policies",
+      "https://support.google.com/webmasters/answer/9012289?hl=en",
+      "https://support.google.com/contributionpolicy/answer/7400114?hl=en",
+      "https://developers.google.com/search/docs/essentials/spam-policies",
+      "https://support.google.com/analytics/answer/9267568?hl=en",
+      "https://www.cleaningsessionsco.com/",
+      "https://nextlevelcleaningco.com/house-cleaning-raleigh-nc/",
+      "https://nextlevelcleaningco.com/quote/",
+      "https://www.sunshineofnc.com/",
+      "https://919shinesquad.com/home",
+      "https://themissionmaids.com/house-cleaning-raleigh/",
+      "https://support.themissionmaids.com/booknow",
+      "https://www.linkedin.com/in/dahya-butt-414521411"
+    ]
+  }
+]

@@ -20,7 +20,7 @@ On-Page SEO focuses on your website's content, while Technical SEO focuses on ho
 
 For a home cleaning company, this could mean earning a mention from a local publication, receiving a relevant link from a genuine business partner, or ensuring your company appears accurately in trusted directories.
 
-These activities can help customers discover your business through additional channels and contribute to the broader context search engines use to understand websites and businesses.
+These activities give customers more ways to find your business. They also give search engines more context about your website and business.
 
 ### What Goes Into Off-Page SEO?
 
@@ -130,7 +130,7 @@ We also consider which local organizations, businesses, and publications may be 
 
 ### 02. Review Your Existing Off-Page Presence
 
-Next, we examine available information about your backlink profile, business mentions, and relevant directory listings. The review may identify relevant existing links and references, inaccurate business information, opportunities for legitimate local visibility, questionable linking patterns that need closer review, and competitor references worth evaluating for relevance. Not every unfamiliar backlink is harmful, and not every competitor link is worth pursuing. The goal is to understand your current position before recommending changes.
+Next, we review the available information about links to your website, mentions of your business, and relevant directory listings. The review may identify relevant existing links and references, inaccurate business information, opportunities for legitimate local visibility, questionable linking patterns that need closer review, and competitor references worth evaluating for relevance. Not every unfamiliar backlink is harmful, and not every competitor link is worth pursuing. The goal is to understand your current position before recommending changes.
 
 ### 03. Identify Relevant Opportunities
 

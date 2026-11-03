@@ -3,9 +3,11 @@ import type { ReactNode, MouseEventHandler } from 'react';
 
 type SiteLinkProps = { to: string; hash?: string; end?: boolean; children?: ReactNode; className?: string | undefined; onClick?: MouseEventHandler<HTMLAnchorElement>; 'aria-label'?: string };
 export function SiteLink({ to, hash, end: _end, ...props }: SiteLinkProps) {
-  const [path = '/', query] = to.split('?');
+  const [destination = '/', inlineHash] = to.split('#');
+  const [path = '/', query] = destination.split('?');
+  const targetHash = hash ?? inlineHash;
   const search = Object.fromEntries(new URLSearchParams(query || ''));
-  return <Link to={path} search={() => search} {...(hash ? { hash } : {})} {...props} />;
+  return <Link to={path} search={() => search} {...(targetHash ? { hash: targetHash } : {})} {...props} />;
 }
 export function SiteNavLink({ to, end, className, ...props }: SiteLinkProps) {
   const pathname = useLocation({ select: location => location.pathname });

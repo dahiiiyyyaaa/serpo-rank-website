@@ -30,7 +30,7 @@ for name in sources:
         width, height = image.size
         logo = "logo" in name
         certificate = name.startswith("certificate-")
-        widths = [480, 960, 1440] if logo else sorted({480, 768, min(1200, width), width})
+        widths = [480, 960, 1440] if logo else sorted({480, 768, min(1200, width)} if name == "pricing-seo-blog-bonus.webp" else {480, 768, min(1200, width), width})
         variants = []
         for target_width in widths:
             target_height = round(height * target_width / width)

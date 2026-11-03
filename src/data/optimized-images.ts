@@ -46,9 +46,9 @@ export const optimizedImages: Record<
     height: 810,
   },
   "/images/pricing-seo-blog-bonus.webp": {
-    src: "/images/pricing-seo-blog-bonus.webp",
+    src: "/images/optimized/pricing-seo-blog-bonus-1200.webp",
     srcSet:
-      "/images/optimized/pricing-seo-blog-bonus-480.webp 480w, /images/optimized/pricing-seo-blog-bonus-768.webp 768w, /images/optimized/pricing-seo-blog-bonus-1200.webp 1200w, /images/pricing-seo-blog-bonus.webp 1904w",
+      "/images/optimized/pricing-seo-blog-bonus-480.webp 480w, /images/optimized/pricing-seo-blog-bonus-768.webp 768w, /images/optimized/pricing-seo-blog-bonus-1200.webp 1200w",
     width: 1904,
     height: 826,
   },

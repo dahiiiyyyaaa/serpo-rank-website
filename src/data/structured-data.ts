@@ -1,4 +1,5 @@
 import { business, siteOrigin } from './business';
+import { homePath } from './site-paths';
 
 type PageMetadata = {
   path: string;
@@ -30,7 +31,7 @@ export const entityIds = {
 // Only live service pages belong here. GBP management is part of local SEO;
 // removed/redirected website-development and audit URLs are not new pages.
 const serviceDetails: Record<string, { name: string; serviceType: string; description: string }> = {
-  '/': {
+  [homePath]: {
     name: 'SEO for Home Cleaning Businesses',
     serviceType: 'Search engine optimization',
     description: business.description,
@@ -74,14 +75,14 @@ export function buildStructuredData(page: PageMetadata): StructuredDataGraph {
   const url = canonicalUrl(page);
   const webpageId = `${url}#webpage`;
   const service = serviceDetails[path];
-  const includeFounder = path === '/' || path === '/about';
+  const includeFounder = path === homePath || path === '/about';
 
   const organization: SchemaNode = {
     '@type': 'Organization',
     '@id': entityIds.organization,
     name: business.name,
     alternateName: business.alternateName,
-    url: `${siteOrigin}/`,
+    url: `${siteOrigin}${homePath}`,
     description: business.description,
     logo: reference(entityIds.logo),
     email: business.email,
@@ -106,7 +107,7 @@ export function buildStructuredData(page: PageMetadata): StructuredDataGraph {
     {
       '@type': 'WebSite',
       '@id': entityIds.website,
-      url: `${siteOrigin}/`,
+      url: `${siteOrigin}${homePath}`,
       name: business.name,
       alternateName: business.alternateName,
       inLanguage: business.language,
@@ -166,13 +167,13 @@ export function buildStructuredData(page: PageMetadata): StructuredDataGraph {
   // Follow the real Home → page journey. /services is a homepage alias,
   // so it must not become a competing entity or artificial breadcrumb level.
   const label = service?.serviceType ?? pageLabels[path];
-  if (path !== '/' && label) {
+  if (path !== homePath && label) {
     webpage['breadcrumb'] = reference(`${url}#breadcrumb`);
     graph.push({
       '@type': 'BreadcrumbList',
       '@id': `${url}#breadcrumb`,
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Home', item: `${siteOrigin}/` },
+        { '@type': 'ListItem', position: 1, name: 'Home', item: `${siteOrigin}${homePath}` },
         { '@type': 'ListItem', position: 2, name: label, item: url },
       ],
     });
@@ -209,7 +210,7 @@ export function buildGuideStructuredData(page: PageMetadata, headline: string): 
     '@type': 'BreadcrumbList',
     '@id': `${url}#breadcrumb`,
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: `${siteOrigin}/` },
+      { '@type': 'ListItem', position: 1, name: 'Home', item: `${siteOrigin}${homePath}` },
       { '@type': 'ListItem', position: 2, name: 'House Cleaning SEO Guide', item: url },
     ],
   });

@@ -1,17 +1,18 @@
 import { business, siteOrigin } from './business';
+import { homePath } from './site-paths';
 import { buildStructuredData, canonicalUrl, serializeJsonLd } from './structured-data';
 
 export { siteOrigin } from './business';
 
 export const seoPages = {
   home: {
-    path: '/',
+    path: homePath,
     title: 'SEO for Home Cleaning Services | Rank Higher on Google and Get Booked',
     description: 'Struggling to get found on Google? Our SEO for home cleaning businesses helps boost visibility, attract qualified leads, and turn searches into bookings.',
   },
   services: {
     path: '/services',
-    canonicalPath: '/',
+    canonicalPath: homePath,
     title: 'SEO for Home Cleaning Services | Rank Higher on Google and Get Booked',
     description: 'Struggling to get found on Google? Our SEO for home cleaning businesses helps boost visibility, attract qualified leads, and turn searches into bookings.',
   },

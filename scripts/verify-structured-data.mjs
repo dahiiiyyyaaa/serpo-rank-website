@@ -11,7 +11,7 @@ const publicDirectory = join(root, '.output', 'public');
 const sitemap = readFileSync(join(root, 'public', 'sitemap.xml'), 'utf8');
 const canonicals = [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map((match) => match[1]);
 const pages = canonicals.map((canonical) => ({ path: new URL(canonical).pathname, canonical }));
-pages.push({ path: '/services', canonical: 'https://serporank.com/' });
+
 const examples = new Map();
 
 function referenceIds(value) {
@@ -22,7 +22,7 @@ function referenceIds(value) {
 }
 
 for (const { path, canonical } of pages) {
-  const htmlPath = join(publicDirectory, path === '/' ? '' : path.slice(1), 'index.html');
+  const htmlPath = join(publicDirectory, path.slice(1), 'index.html');
   const dom = new JSDOM(readFileSync(htmlPath, 'utf8'));
   const document = dom.window.document;
   const scripts = document.querySelectorAll('script[type="application/ld+json"]');

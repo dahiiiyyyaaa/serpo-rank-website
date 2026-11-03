@@ -17,6 +17,7 @@ import { Route as PricingRouteImport } from './routes/pricing'
 import { Route as SeoAuditRouteImport } from './routes/seo-audit'
 import { Route as ServicesRouteImport } from './routes/services'
 import { Route as BlogHouseCleaningSeoGuideRouteImport } from './routes/blog.house-cleaning-seo-guide'
+import { Route as SeoForHomeCleaningBusinessesIndexRouteImport } from './routes/seo-for-home-cleaning-businesses.index'
 import { Route as ServicesIndexRouteImport } from './routes/services.index'
 import { Route as ServicesLocalSeoRouteImport } from './routes/services.local-seo'
 import { Route as ServicesOffPageSeoRouteImport } from './routes/services.off-page-seo'
@@ -64,6 +65,12 @@ const BlogHouseCleaningSeoGuideRoute =
   BlogHouseCleaningSeoGuideRouteImport.update({
     id: '/blog/house-cleaning-seo-guide',
     path: '/blog/house-cleaning-seo-guide',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const SeoForHomeCleaningBusinessesIndexRoute =
+  SeoForHomeCleaningBusinessesIndexRouteImport.update({
+    id: '/seo-for-home-cleaning-businesses/',
+    path: '/seo-for-home-cleaning-businesses/',
     getParentRoute: () => rootRouteImport,
   } as any)
 const ServicesIndexRoute = ServicesIndexRouteImport.update({
@@ -118,6 +125,7 @@ export interface FileRoutesByFullPath {
   '/services/seo-audits': typeof ServicesSeoAuditsRoute
   '/services/technical-seo': typeof ServicesTechnicalSeoRoute
   '/services/website-development': typeof ServicesWebsiteDevelopmentRoute
+  '/seo-for-home-cleaning-businesses/': typeof SeoForHomeCleaningBusinessesIndexRoute
   '/services/': typeof ServicesIndexRoute
 }
 export interface FileRoutesByTo {
@@ -134,6 +142,7 @@ export interface FileRoutesByTo {
   '/services/seo-audits': typeof ServicesSeoAuditsRoute
   '/services/technical-seo': typeof ServicesTechnicalSeoRoute
   '/services/website-development': typeof ServicesWebsiteDevelopmentRoute
+  '/seo-for-home-cleaning-businesses': typeof SeoForHomeCleaningBusinessesIndexRoute
   '/services': typeof ServicesIndexRoute
 }
 export interface FileRoutesById {
@@ -152,6 +161,7 @@ export interface FileRoutesById {
   '/services/seo-audits': typeof ServicesSeoAuditsRoute
   '/services/technical-seo': typeof ServicesTechnicalSeoRoute
   '/services/website-development': typeof ServicesWebsiteDevelopmentRoute
+  '/seo-for-home-cleaning-businesses/': typeof SeoForHomeCleaningBusinessesIndexRoute
   '/services/': typeof ServicesIndexRoute
 }
 export interface FileRouteTypes {
@@ -171,6 +181,7 @@ export interface FileRouteTypes {
     | '/services/seo-audits'
     | '/services/technical-seo'
     | '/services/website-development'
+    | '/seo-for-home-cleaning-businesses/'
     | '/services/'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -187,6 +198,7 @@ export interface FileRouteTypes {
     | '/services/seo-audits'
     | '/services/technical-seo'
     | '/services/website-development'
+    | '/seo-for-home-cleaning-businesses'
     | '/services'
   id:
     | '__root__'
@@ -204,6 +216,7 @@ export interface FileRouteTypes {
     | '/services/seo-audits'
     | '/services/technical-seo'
     | '/services/website-development'
+    | '/seo-for-home-cleaning-businesses/'
     | '/services/'
   fileRoutesById: FileRoutesById
 }
@@ -216,6 +229,7 @@ export interface RootRouteChildren {
   SeoAuditRoute: typeof SeoAuditRoute
   ServicesRoute: typeof ServicesRouteWithChildren
   BlogHouseCleaningSeoGuideRoute: typeof BlogHouseCleaningSeoGuideRoute
+  SeoForHomeCleaningBusinessesIndexRoute: typeof SeoForHomeCleaningBusinessesIndexRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -274,6 +288,13 @@ declare module '@tanstack/react-router' {
       path: '/blog/house-cleaning-seo-guide'
       fullPath: '/blog/house-cleaning-seo-guide'
       preLoaderRoute: typeof BlogHouseCleaningSeoGuideRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/seo-for-home-cleaning-businesses/': {
+      id: '/seo-for-home-cleaning-businesses/'
+      path: '/seo-for-home-cleaning-businesses'
+      fullPath: '/seo-for-home-cleaning-businesses/'
+      preLoaderRoute: typeof SeoForHomeCleaningBusinessesIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/services/': {
@@ -361,6 +382,8 @@ const rootRouteChildren: RootRouteChildren = {
   SeoAuditRoute: SeoAuditRoute,
   ServicesRoute: ServicesRouteWithChildren,
   BlogHouseCleaningSeoGuideRoute: BlogHouseCleaningSeoGuideRoute,
+  SeoForHomeCleaningBusinessesIndexRoute:
+    SeoForHomeCleaningBusinessesIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
