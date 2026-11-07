@@ -3,7 +3,6 @@ export const siteOrigin = 'https://serporank.com';
 
 export const business = {
   name: 'Serpo Rank',
-  alternateName: 'SerpoRank',
   description: 'Serpo Rank provides SEO services for home cleaning businesses, including local SEO, technical SEO, on-page SEO, and off-page SEO.',
   language: 'en',
   email: 'dahiyabutt28@gmail.com',

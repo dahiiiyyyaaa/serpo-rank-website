@@ -2,6 +2,7 @@ import { createFileRoute } from '@tanstack/react-router';
 import { HouseCleaningGuide } from '@/components/site/house-cleaning-guide';
 import guideCss from '@/components/site/house-cleaning-guide.css?url';
 import { siteOrigin } from '@/data/seo';
+import { business } from '@/data/business';
 import { buildGuideStructuredData, serializeJsonLd } from '@/data/structured-data';
 
 const guidePage = {
@@ -21,9 +22,13 @@ export const Route = createFileRoute('/blog/house-cleaning-seo-guide')({
       { property: 'og:title', content: guidePage.title },
       { property: 'og:description', content: guidePage.description },
       { property: 'og:type', content: 'article' },
+      { property: 'og:site_name', content: business.name },
       { property: 'og:url', content: guideUrl },
+      { property: 'og:image', content: `${siteOrigin}${business.logo.path}` },
+      { property: 'og:image:alt', content: `${business.name} logo` },
       { name: 'twitter:title', content: guidePage.title },
       { name: 'twitter:description', content: guidePage.description },
+      { name: 'twitter:image', content: `${siteOrigin}${business.logo.path}` },
     ],
     links: [
       { rel: 'canonical', href: guideUrl },

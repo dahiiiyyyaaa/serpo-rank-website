@@ -60,6 +60,7 @@ const serviceDetails: Record<string, { name: string; serviceType: string; descri
 
 const pageLabels: Record<string, string> = {
   '/packages': 'Pricing & Plans',
+  '/blog': 'Blog',
   '/about': 'About',
   '/contact': 'Contact',
 };
@@ -81,7 +82,6 @@ export function buildStructuredData(page: PageMetadata): StructuredDataGraph {
     '@type': 'Organization',
     '@id': entityIds.organization,
     name: business.name,
-    alternateName: business.alternateName,
     url: `${siteOrigin}${homePath}`,
     description: business.description,
     logo: reference(entityIds.logo),
@@ -109,7 +109,7 @@ export function buildStructuredData(page: PageMetadata): StructuredDataGraph {
       '@id': entityIds.website,
       url: `${siteOrigin}${homePath}`,
       name: business.name,
-      alternateName: business.alternateName,
+      description: business.description,
       inLanguage: business.language,
       publisher: reference(entityIds.organization),
     },

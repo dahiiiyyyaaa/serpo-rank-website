@@ -164,6 +164,7 @@ export function Navbar() {
           <NavLink to={homePath} end onClick={closeMenu}>Home</NavLink>
           <NavLink to="/packages" onClick={closeMenu}>Pricing</NavLink>
           <NavLink to="/about" onClick={closeMenu}>About</NavLink>
+          <NavLink to="/blog" onClick={closeMenu}>Blog</NavLink>
           <NavLink to="/contact" onClick={closeMenu}>Contact</NavLink>
           <Link className="button button-small nav-cta" to="/contact" onClick={closeMenu}>Get Started <ArrowRight size={15} /></Link>
         </nav>
@@ -173,7 +174,7 @@ export function Navbar() {
 }
 
 export function Footer() {
-  return <footer className="footer"><div className="container footer-top"><div><Logo /></div><div className="footer-links"><span className="eyebrow">EXPLORE</span><div className="footer-link-grid"><Link to={homePath}>Home</Link><Link to="/packages">Pricing &amp; Plans</Link><Link to="/services/local-seo">Local SEO</Link><Link to="/services/on-page-seo">On-Page SEO</Link><Link to={homePath} hash="book-free-audit">SEO Audit</Link><Link to="/about">About</Link><Link to="/contact">Contact</Link></div></div><div className="footer-links"><span className="eyebrow">CONNECT</span><div className="socials"><a href="https://www.linkedin.com/in/dahya-butt-414521411" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><Linkedin size={17} /></a></div></div></div></footer>;
+  return <footer className="footer"><div className="container footer-top"><div><Logo /></div><div className="footer-links"><span className="eyebrow">EXPLORE</span><div className="footer-link-grid"><Link to={homePath}>Home</Link><Link to="/packages">Pricing &amp; Plans</Link><Link to="/services/local-seo">Local SEO</Link><Link to="/services/on-page-seo">On-Page SEO</Link><Link to={homePath} hash="book-free-audit">SEO Audit</Link><Link to="/about">About</Link><Link to="/blog">Blog</Link><Link to="/contact">Contact</Link></div></div><div className="footer-links"><span className="eyebrow">CONNECT</span><div className="socials"><a href="https://www.linkedin.com/in/dahya-butt-414521411" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><Linkedin size={17} /></a></div></div></div></footer>;
 }
 
 function ServiceCard({ service }: { service: Service }) {

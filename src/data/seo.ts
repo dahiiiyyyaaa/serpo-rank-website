@@ -21,6 +21,11 @@ export const seoPages = {
     title: 'SEO Service Pricing | Serpo Rank',
     description: 'Review Serpo Rank’s SEO pricing and find a service plan suited to your website, goals, and growth stage.',
   },
+  blog: {
+    path: '/blog',
+    title: 'SEO Guides for Home Cleaning Businesses | Serpo Rank',
+    description: 'Explore Serpo Rank guides on Google Business Profile, service pages, local search visibility, and turning enquiries into bookings.',
+  },
   about: {
     path: '/about',
     title: 'About Serpo Rank | SEO Specialists',

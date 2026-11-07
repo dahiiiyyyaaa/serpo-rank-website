@@ -16,6 +16,7 @@ import { Route as PackagesRouteImport } from './routes/packages'
 import { Route as PricingRouteImport } from './routes/pricing'
 import { Route as SeoAuditRouteImport } from './routes/seo-audit'
 import { Route as ServicesRouteImport } from './routes/services'
+import { Route as BlogIndexRouteImport } from './routes/blog.index'
 import { Route as BlogHouseCleaningSeoGuideRouteImport } from './routes/blog.house-cleaning-seo-guide'
 import { Route as SeoForHomeCleaningBusinessesIndexRouteImport } from './routes/seo-for-home-cleaning-businesses.index'
 import { Route as ServicesIndexRouteImport } from './routes/services.index'
@@ -59,6 +60,11 @@ const SeoAuditRoute = SeoAuditRouteImport.update({
 const ServicesRoute = ServicesRouteImport.update({
   id: '/services',
   path: '/services',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BlogIndexRoute = BlogIndexRouteImport.update({
+  id: '/blog/',
+  path: '/blog/',
   getParentRoute: () => rootRouteImport,
 } as any)
 const BlogHouseCleaningSeoGuideRoute =
@@ -125,6 +131,7 @@ export interface FileRoutesByFullPath {
   '/services/seo-audits': typeof ServicesSeoAuditsRoute
   '/services/technical-seo': typeof ServicesTechnicalSeoRoute
   '/services/website-development': typeof ServicesWebsiteDevelopmentRoute
+  '/blog/': typeof BlogIndexRoute
   '/seo-for-home-cleaning-businesses/': typeof SeoForHomeCleaningBusinessesIndexRoute
   '/services/': typeof ServicesIndexRoute
 }
@@ -142,6 +149,7 @@ export interface FileRoutesByTo {
   '/services/seo-audits': typeof ServicesSeoAuditsRoute
   '/services/technical-seo': typeof ServicesTechnicalSeoRoute
   '/services/website-development': typeof ServicesWebsiteDevelopmentRoute
+  '/blog': typeof BlogIndexRoute
   '/seo-for-home-cleaning-businesses': typeof SeoForHomeCleaningBusinessesIndexRoute
   '/services': typeof ServicesIndexRoute
 }
@@ -161,6 +169,7 @@ export interface FileRoutesById {
   '/services/seo-audits': typeof ServicesSeoAuditsRoute
   '/services/technical-seo': typeof ServicesTechnicalSeoRoute
   '/services/website-development': typeof ServicesWebsiteDevelopmentRoute
+  '/blog/': typeof BlogIndexRoute
   '/seo-for-home-cleaning-businesses/': typeof SeoForHomeCleaningBusinessesIndexRoute
   '/services/': typeof ServicesIndexRoute
 }
@@ -181,6 +190,7 @@ export interface FileRouteTypes {
     | '/services/seo-audits'
     | '/services/technical-seo'
     | '/services/website-development'
+    | '/blog/'
     | '/seo-for-home-cleaning-businesses/'
     | '/services/'
   fileRoutesByTo: FileRoutesByTo
@@ -198,6 +208,7 @@ export interface FileRouteTypes {
     | '/services/seo-audits'
     | '/services/technical-seo'
     | '/services/website-development'
+    | '/blog'
     | '/seo-for-home-cleaning-businesses'
     | '/services'
   id:
@@ -216,6 +227,7 @@ export interface FileRouteTypes {
     | '/services/seo-audits'
     | '/services/technical-seo'
     | '/services/website-development'
+    | '/blog/'
     | '/seo-for-home-cleaning-businesses/'
     | '/services/'
   fileRoutesById: FileRoutesById
@@ -229,6 +241,7 @@ export interface RootRouteChildren {
   SeoAuditRoute: typeof SeoAuditRoute
   ServicesRoute: typeof ServicesRouteWithChildren
   BlogHouseCleaningSeoGuideRoute: typeof BlogHouseCleaningSeoGuideRoute
+  BlogIndexRoute: typeof BlogIndexRoute
   SeoForHomeCleaningBusinessesIndexRoute: typeof SeoForHomeCleaningBusinessesIndexRoute
 }
 
@@ -281,6 +294,13 @@ declare module '@tanstack/react-router' {
       path: '/services'
       fullPath: '/services'
       preLoaderRoute: typeof ServicesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/blog/': {
+      id: '/blog/'
+      path: '/blog'
+      fullPath: '/blog/'
+      preLoaderRoute: typeof BlogIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/blog/house-cleaning-seo-guide': {
@@ -382,6 +402,7 @@ const rootRouteChildren: RootRouteChildren = {
   SeoAuditRoute: SeoAuditRoute,
   ServicesRoute: ServicesRouteWithChildren,
   BlogHouseCleaningSeoGuideRoute: BlogHouseCleaningSeoGuideRoute,
+  BlogIndexRoute: BlogIndexRoute,
   SeoForHomeCleaningBusinessesIndexRoute:
     SeoForHomeCleaningBusinessesIndexRoute,
 }
