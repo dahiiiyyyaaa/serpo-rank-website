@@ -7,14 +7,14 @@ export { siteOrigin } from './business';
 export const seoPages = {
   home: {
     path: homePath,
-    title: 'SEO for Home Cleaning Services | Rank Higher on Google and Get Booked',
-    description: 'Struggling to get found on Google? Our SEO for home cleaning businesses helps boost visibility, attract qualified leads, and turn searches into bookings.',
+    title: 'SEO for House Cleaning Businesses | Rank Higher on Google and Get More Bookings',
+    description: 'Struggling to get found on Google? Our SEO for house cleaning businesses helps boost visibility, attract qualified leads, and turn searches into bookings.',
   },
   services: {
     path: '/services',
     canonicalPath: homePath,
-    title: 'SEO for Home Cleaning Services | Rank Higher on Google and Get Booked',
-    description: 'Struggling to get found on Google? Our SEO for home cleaning businesses helps boost visibility, attract qualified leads, and turn searches into bookings.',
+    title: 'SEO for House Cleaning Businesses | Rank Higher on Google and Get More Bookings',
+    description: 'Struggling to get found on Google? Our SEO for house cleaning businesses helps boost visibility, attract qualified leads, and turn searches into bookings.',
   },
   pricing: {
     path: '/packages',
