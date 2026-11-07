@@ -217,6 +217,37 @@ export function buildGuideStructuredData(page: PageMetadata, headline: string): 
   return graph;
 }
 
+/** Article metadata without an unverified author, date, or pending hero image. */
+export function buildEditorialArticleStructuredData(page: PageMetadata, image?: { path: string; width: number; height: number }): StructuredDataGraph {
+  const graph = buildStructuredData(page);
+  const url = canonicalUrl(page);
+  const webpage = graph['@graph'].find((node) => node['@id'] === `${url}#webpage`);
+  if (!webpage) throw new Error('Article WebPage schema is missing');
+  webpage['mainEntity'] = reference(`${url}#article`);
+  webpage['breadcrumb'] = reference(`${url}#breadcrumb`);
+  graph['@graph'].push({
+    '@type': 'BlogPosting',
+    '@id': `${url}#article`,
+    headline: page.title,
+    description: page.description,
+    url,
+    inLanguage: business.language,
+    mainEntityOfPage: reference(`${url}#webpage`),
+    publisher: reference(entityIds.organization),
+    ...(image ? { image: { '@type': 'ImageObject', url: `${siteOrigin}${image.path}`, width: image.width, height: image.height } } : {}),
+    isAccessibleForFree: true,
+  }, {
+    '@type': 'BreadcrumbList',
+    '@id': `${url}#breadcrumb`,
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: `${siteOrigin}${homePath}` },
+      { '@type': 'ListItem', position: 2, name: 'Blog', item: `${siteOrigin}/blog` },
+      { '@type': 'ListItem', position: 3, name: page.title, item: url },
+    ],
+  });
+  return graph;
+}
+
 /** Escape HTML-significant characters before embedding JSON in a script tag. */
 export function serializeJsonLd(value: unknown): string {
   const json = JSON.stringify(value);

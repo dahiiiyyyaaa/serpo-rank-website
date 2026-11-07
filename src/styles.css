@@ -2318,6 +2318,7 @@ main.home-page .home-hero-caption { max-width: none; font-size: 11px !important;
 .blog-index-intro h1 { max-width: 760px; margin: 0 auto 18px; color: var(--site-color-1); font-family: var(--font-heading); font-size: clamp(2.25rem, 4vw, 3.5rem); line-height: 1.1; text-wrap: balance; }
 .blog-index-intro p { max-width: 690px; margin: 0 auto; color: var(--site-color-3); font-size: 15px; line-height: 1.75; }
 .blog-index-page .featured-guide { padding: 0; }
+.blog-index-page .blog-article-list { margin-top: 28px; }
 .featured-guide-intro .eyebrow,
 .featured-guide-copy .eyebrow { color: var(--site-color-12); font-size: 11px; letter-spacing: .14em; }
 .featured-guide-intro h2 { margin: 12px auto 14px; color: var(--site-color-1); font-family: var(--font-heading); font-size: clamp(2rem, 3.5vw, 2.75rem); line-height: 1.14; letter-spacing: -.035em; text-wrap: balance; }

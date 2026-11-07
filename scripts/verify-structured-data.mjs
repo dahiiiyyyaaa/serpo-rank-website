@@ -43,14 +43,17 @@ for (const { path, canonical } of pages) {
   assert.equal(webpage.description, document.querySelector('meta[name="description"]').content);
   assert.equal(data['@graph'].filter((node) => node['@type'] === 'Organization').length, 1);
   assert.equal(data['@graph'].find((node) => node['@type'] === 'Organization')['@id'], 'https://serporank.com/#organization');
+  const websites = data['@graph'].filter((node) => node['@type'] === 'WebSite');
+  assert.equal(websites.length, 1, `${path}: expected one WebSite entity`);
+  assert.equal(websites[0].publisher['@id'], 'https://serporank.com/#organization');
   for (const node of data['@graph']) {
     if (node['@type'] === 'ImageObject') {
       assert.ok(existsSync(join(publicDirectory, new URL(node.contentUrl).pathname.slice(1))), `${path}: missing logo asset`);
     }
     if (node['@type'] === 'BreadcrumbList') {
-      assert.equal(node.itemListElement.length, 2);
+      assert.ok(node.itemListElement.length >= 2, `${path}: incomplete breadcrumb`);
       assert.equal(node.itemListElement.at(-1).item, canonical);
-      assert.deepEqual(node.itemListElement.map((item) => item.position), [1, 2]);
+      assert.deepEqual(node.itemListElement.map((item) => item.position), node.itemListElement.map((_, index) => index + 1));
     }
   }
   if (path === '/') examples.set('homepage', scripts[0].outerHTML);

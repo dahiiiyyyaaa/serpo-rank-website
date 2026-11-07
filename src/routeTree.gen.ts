@@ -18,6 +18,7 @@ import { Route as SeoAuditRouteImport } from './routes/seo-audit'
 import { Route as ServicesRouteImport } from './routes/services'
 import { Route as BlogIndexRouteImport } from './routes/blog.index'
 import { Route as BlogHouseCleaningSeoGuideRouteImport } from './routes/blog.house-cleaning-seo-guide'
+import { Route as BlogSeoVsMetaAdsRouteImport } from './routes/blog.seo-vs-meta-ads'
 import { Route as SeoForHomeCleaningBusinessesIndexRouteImport } from './routes/seo-for-home-cleaning-businesses.index'
 import { Route as ServicesIndexRouteImport } from './routes/services.index'
 import { Route as ServicesLocalSeoRouteImport } from './routes/services.local-seo'
@@ -73,6 +74,11 @@ const BlogHouseCleaningSeoGuideRoute =
     path: '/blog/house-cleaning-seo-guide',
     getParentRoute: () => rootRouteImport,
   } as any)
+const BlogSeoVsMetaAdsRoute = BlogSeoVsMetaAdsRouteImport.update({
+  id: '/blog/seo-vs-meta-ads',
+  path: '/blog/seo-vs-meta-ads',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const SeoForHomeCleaningBusinessesIndexRoute =
   SeoForHomeCleaningBusinessesIndexRouteImport.update({
     id: '/seo-for-home-cleaning-businesses/',
@@ -125,6 +131,7 @@ export interface FileRoutesByFullPath {
   '/seo-audit': typeof SeoAuditRoute
   '/services': typeof ServicesRouteWithChildren
   '/blog/house-cleaning-seo-guide': typeof BlogHouseCleaningSeoGuideRoute
+  '/blog/seo-vs-meta-ads': typeof BlogSeoVsMetaAdsRoute
   '/services/local-seo': typeof ServicesLocalSeoRoute
   '/services/off-page-seo': typeof ServicesOffPageSeoRoute
   '/services/on-page-seo': typeof ServicesOnPageSeoRoute
@@ -143,6 +150,7 @@ export interface FileRoutesByTo {
   '/pricing': typeof PricingRoute
   '/seo-audit': typeof SeoAuditRoute
   '/blog/house-cleaning-seo-guide': typeof BlogHouseCleaningSeoGuideRoute
+  '/blog/seo-vs-meta-ads': typeof BlogSeoVsMetaAdsRoute
   '/services/local-seo': typeof ServicesLocalSeoRoute
   '/services/off-page-seo': typeof ServicesOffPageSeoRoute
   '/services/on-page-seo': typeof ServicesOnPageSeoRoute
@@ -163,6 +171,7 @@ export interface FileRoutesById {
   '/seo-audit': typeof SeoAuditRoute
   '/services': typeof ServicesRouteWithChildren
   '/blog/house-cleaning-seo-guide': typeof BlogHouseCleaningSeoGuideRoute
+  '/blog/seo-vs-meta-ads': typeof BlogSeoVsMetaAdsRoute
   '/services/local-seo': typeof ServicesLocalSeoRoute
   '/services/off-page-seo': typeof ServicesOffPageSeoRoute
   '/services/on-page-seo': typeof ServicesOnPageSeoRoute
@@ -184,6 +193,7 @@ export interface FileRouteTypes {
     | '/seo-audit'
     | '/services'
     | '/blog/house-cleaning-seo-guide'
+    | '/blog/seo-vs-meta-ads'
     | '/services/local-seo'
     | '/services/off-page-seo'
     | '/services/on-page-seo'
@@ -202,6 +212,7 @@ export interface FileRouteTypes {
     | '/pricing'
     | '/seo-audit'
     | '/blog/house-cleaning-seo-guide'
+    | '/blog/seo-vs-meta-ads'
     | '/services/local-seo'
     | '/services/off-page-seo'
     | '/services/on-page-seo'
@@ -221,6 +232,7 @@ export interface FileRouteTypes {
     | '/seo-audit'
     | '/services'
     | '/blog/house-cleaning-seo-guide'
+    | '/blog/seo-vs-meta-ads'
     | '/services/local-seo'
     | '/services/off-page-seo'
     | '/services/on-page-seo'
@@ -241,6 +253,7 @@ export interface RootRouteChildren {
   SeoAuditRoute: typeof SeoAuditRoute
   ServicesRoute: typeof ServicesRouteWithChildren
   BlogHouseCleaningSeoGuideRoute: typeof BlogHouseCleaningSeoGuideRoute
+  BlogSeoVsMetaAdsRoute: typeof BlogSeoVsMetaAdsRoute
   BlogIndexRoute: typeof BlogIndexRoute
   SeoForHomeCleaningBusinessesIndexRoute: typeof SeoForHomeCleaningBusinessesIndexRoute
 }
@@ -308,6 +321,13 @@ declare module '@tanstack/react-router' {
       path: '/blog/house-cleaning-seo-guide'
       fullPath: '/blog/house-cleaning-seo-guide'
       preLoaderRoute: typeof BlogHouseCleaningSeoGuideRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/blog/seo-vs-meta-ads': {
+      id: '/blog/seo-vs-meta-ads'
+      path: '/blog/seo-vs-meta-ads'
+      fullPath: '/blog/seo-vs-meta-ads'
+      preLoaderRoute: typeof BlogSeoVsMetaAdsRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/seo-for-home-cleaning-businesses/': {
@@ -402,6 +422,7 @@ const rootRouteChildren: RootRouteChildren = {
   SeoAuditRoute: SeoAuditRoute,
   ServicesRoute: ServicesRouteWithChildren,
   BlogHouseCleaningSeoGuideRoute: BlogHouseCleaningSeoGuideRoute,
+  BlogSeoVsMetaAdsRoute: BlogSeoVsMetaAdsRoute,
   BlogIndexRoute: BlogIndexRoute,
   SeoForHomeCleaningBusinessesIndexRoute:
     SeoForHomeCleaningBusinessesIndexRoute,
