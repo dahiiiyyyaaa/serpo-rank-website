@@ -23,8 +23,8 @@ export const seoPages = {
   },
   blog: {
     path: '/blog',
-    title: 'SEO Guides for Home Cleaning Businesses | Serpo Rank',
-    description: 'Explore Serpo Rank guides on Google Business Profile, service pages, local search visibility, and turning enquiries into bookings.',
+    title: 'SEO Insights and Resources for House Cleaning Businesses | Serpo Rank',
+    description: 'Explore practical SEO strategies, expert guides, and actionable insights to help your cleaning business rank higher on Google.',
   },
   about: {
     path: '/about',

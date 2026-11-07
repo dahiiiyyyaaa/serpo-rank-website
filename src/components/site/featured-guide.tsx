@@ -4,12 +4,13 @@ import { SiteLink as Link } from '@/components/site/navigation';
 const guidePath = '/blog/house-cleaning-seo-guide';
 const imageBase = '/images/optimized/serpo_rank_featured_blog_photo-';
 
-export function FeaturedGuide() {
-  return <section className="container featured-guide" aria-labelledby="featured-guide-title">
-    <div className="featured-guide-intro">
+export function FeaturedGuide({ showIntro = true }: { showIntro?: boolean }) {
+  const CardHeading = showIntro ? 'h3' : 'h2';
+  return <section className="container featured-guide" aria-labelledby={showIntro ? 'featured-guide-title' : 'featured-guide-card-title'}>
+    {showIntro && <div className="featured-guide-intro">
       <h2 id="featured-guide-title">Our Guide For Your Cleaning Business with Proven SEO Strategies.</h2>
       <p>Practical SEO strategies, local search insights, and actionable guides for cleaning business owners. Get the knowledge you need to attract more customers, rank higher, and grow your business online.</p>
-    </div>
+    </div>}
     <article className="featured-guide-card">
       <Link to={guidePath} className="featured-guide-image-link" aria-label="Read The Complete SEO Guide for Home Cleaning Businesses">
         <img
@@ -25,7 +26,7 @@ export function FeaturedGuide() {
       </Link>
       <div className="featured-guide-copy">
         <span className="eyebrow">FEATURED GUIDE</span>
-        <h3><Link to={guidePath}>The Complete SEO Guide for Home Cleaning Businesses</Link></h3>
+        <CardHeading id="featured-guide-card-title" className="featured-guide-heading"><Link to={guidePath}>The Complete SEO Guide for Home Cleaning Businesses</Link></CardHeading>
         <p>This guide explains how cleaning companies can connect Google Business Profile, service pages, customer reviews, and booking follow-up.</p>
         <Link className="featured-guide-read" to={guidePath}>Read the Full Guide <ArrowRight size={17} aria-hidden="true" /></Link>
       </div>
