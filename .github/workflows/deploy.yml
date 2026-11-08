@@ -57,3 +57,15 @@ jobs:
           protocol: ftps
           security: loose
           dangerous-clean-slate: false
+
+      - name: Sync build to the active Node worker
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: 65.181.116.46
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: .output/
+          server-dir: deploys/current/.output/
+          protocol: ftps
+          security: loose
+          dangerous-clean-slate: false
