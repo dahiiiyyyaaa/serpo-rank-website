@@ -45,3 +45,15 @@ jobs:
           protocol: ftps
           security: loose
           dangerous-clean-slate: false
+
+      - name: Sync files to the existing live document root
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: 65.181.116.46
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: .output/public/
+          server-dir: deploys/current/dist/
+          protocol: ftps
+          security: loose
+          dangerous-clean-slate: false
