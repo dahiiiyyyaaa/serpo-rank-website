@@ -9,11 +9,22 @@
 
 <IfModule mod_rewrite.c>
   RewriteEngine On
-  RewriteRule ^$ /seo-for-home-cleaning-businesses/ [R=301,L,NE]
-  RewriteRule ^seo-for-home-cleaning-businesses$ /seo-for-home-cleaning-businesses/ [R=301,L,NE]
-  RewriteRule ^services/?$ /seo-for-home-cleaning-businesses/#our-seo-services [R=301,L,NE]
-  RewriteRule ^(?:seo-audit|services/seo-audits)/?$ /seo-for-home-cleaning-businesses/#book-free-audit [R=301,L,NE]
-  RewriteRule ^services/website-development/?$ /seo-for-home-cleaning-businesses/ [R=301,L,NE]
+  # Resolve legacy entry points directly to the preferred HTTPS, non-www URLs.
+  RewriteRule ^$ https://serporank.com/seo-for-home-cleaning-businesses/ [R=301,L,NE]
+  RewriteRule ^seo-for-home-cleaning-businesses$ https://serporank.com/seo-for-home-cleaning-businesses/ [R=301,L,NE]
+  RewriteRule ^services/?$ https://serporank.com/seo-for-home-cleaning-businesses/#our-seo-services [R=301,L,NE]
+  RewriteRule ^(?:seo-audit|services/seo-audits)/?$ https://serporank.com/seo-for-home-cleaning-businesses/#book-free-audit [R=301,L,NE]
+  RewriteRule ^services/website-development/?$ https://serporank.com/seo-for-home-cleaning-businesses/ [R=301,L,NE]
+  RewriteRule ^pricing/?$ https://serporank.com/packages [R=301,L,NE]
+
+  # Collapse duplicate HTTP and www hosts while preserving path and query data.
+  RewriteCond %{HTTPS} !=on [OR]
+  RewriteCond %{HTTP_HOST} !^serporank\.com$ [NC]
+  RewriteRule ^ https://serporank.com%{REQUEST_URI} [R=301,L,NE]
+
+  # The homepage keeps its trailing slash; other public pages use slashless URLs.
+  RewriteRule ^(about|blog|blog/(?:house-cleaning-seo-guide|seo-vs-meta-ads)|contact|packages|services/(?:local-seo|on-page-seo|off-page-seo|technical-seo))/$ https://serporank.com/$1 [R=301,L,NE]
+
   # Serve clean URLs without requiring a second directory-slash redirect.
-  RewriteRule ^(about|contact|packages|services/(?:local-seo|on-page-seo|off-page-seo|technical-seo)|blog/house-cleaning-seo-guide)/?$ $1/index.html [L]
+  RewriteRule ^(about|blog|blog/(?:house-cleaning-seo-guide|seo-vs-meta-ads)|contact|packages|services/(?:local-seo|on-page-seo|off-page-seo|technical-seo))$ $1/index.html [L]
 </IfModule>

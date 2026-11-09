@@ -1,2 +1,6 @@
 import { createFileRoute, redirect } from "@tanstack/react-router";
-export const Route = createFileRoute("/pricing")({ beforeLoad: () => { throw redirect({ to: "/packages" }); } });
+export const Route = createFileRoute("/pricing")({
+  beforeLoad: () => {
+    throw redirect({ to: "/packages", statusCode: 301 });
+  },
+});
